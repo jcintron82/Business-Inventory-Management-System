@@ -1,0 +1,8 @@
+.formWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    align-items: center;
+    border-color: black;
+}
