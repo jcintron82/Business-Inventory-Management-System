@@ -41,4 +41,61 @@ app.use(function(err, req, res, next) {
 app.listen(5000, () => {
   console.log('Running on Port 5000...')
 })
+
+const mongoose=require('mongoose');
+mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority')
+
+const flower = require('./flower');
+const concentrate = require('./concentrates')
+
+
+const runConcentrates = async (err) => {
+  try {
+  const OGBudder = await new concentrate.create({
+    strainName: 'OG Kush Budder',
+    classification: 'Indica',
+    consistency: 'Budder',
+    cannabanoids: {
+      THC:80,
+      CBD:1
+    },
+    SKU: 0001,
+    topTerpenes: ['Myrcene', 'Limonene' ],
+    price: 60,
+    stock: 5,
+    // similarTo: mongoose.SchemaTypes.ObjectId
+  })
+console.log(OGBudder)
+}
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+const run = async (err) => {
+
+  try {
+const OGKush = await concentrate.create({ 
+  strainName: 'Blue dream',
+  classification: 'Indica',
+  consistency: 'Budder',
+  cannabanoids: {
+    THC:20,
+    CBD:5
+  },
+  SKU: 001,
+  topTerpenes: ['Myrcene', 'Limonene' ],
+  price: 35,
+  stock: 5,
+  // similarTo: mongoose.SchemaTypes.ObjectId
+}
+) 
+console.log(OGKush)
+runConcentrates();}
+catch (err) {
+  console.log(err.message)
+}
+}
+run()
+
 module.exports = app;
