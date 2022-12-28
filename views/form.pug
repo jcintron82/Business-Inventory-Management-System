@@ -4,17 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta http-equiv="refresh" content="3" >
+        //- <meta http-equiv="refresh" content="1" >
         <title>#{ title }</title>
         style 
             include ../public/stylesheets/style.css
             include ../public/stylesheets/formpage.css
     </head>
     <body>
-
-    <form class='formWrap'>
+    p #{title}
+    <form class='formWrap' method="POST" action='/form'>
         <label> Strain
-            <input>
+            <input name='strain'>
         </label>
 
         <label> Classification
@@ -44,5 +44,5 @@
     </form>
         
     </body>
-    <script src="index.js"></script>
+
 </html>

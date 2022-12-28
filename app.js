@@ -9,6 +9,7 @@ var usersRouter = require('./routes/form');
 
 var app = express();
 
+const funcFloat = {}; 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -43,15 +44,15 @@ app.listen(5000, () => {
 })
 
 //Middleare for browser live reload
-var livereload = require("livereload");
-var connectLiveReload = require("connect-livereload");
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-});
-app.use(connectLiveReload());
+// var livereload = require("livereload");
+// var connectLiveReload = require("connect-livereload");
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.server.once("connection", () => {
+//   setTimeout(() => {
+//     liveReloadServer.refresh("/");
+//   }, 100);
+// });
+// app.use(connectLiveReload());
 
 const mongoose=require('mongoose');
 mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority')
@@ -109,6 +110,8 @@ console.log(OGBudder)
     console.log(err.message);
   }
 }
-run()
+runConcentrates()
+
 
 module.exports = app;
+
