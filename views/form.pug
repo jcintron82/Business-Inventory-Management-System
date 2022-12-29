@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        //- <meta http-equiv="refresh" content="1" >
+        //- <meta http-equiv="refresh" content="3" >
         <title>#{ title }</title>
         style 
             include ../public/stylesheets/style.css
@@ -15,40 +15,64 @@
     <form class='formWrap' method="POST" action='/form'>
 
         <label> Type
-            <input name='type'>
+            <select name='type'>
+                <option name='type' value='Concentrate'>Concentrate</option>
+                <option name='type' value='Flower'>Flower</option>
+            </select>
         </label>
 
         <label> Strain
-            <input name='strain'>
+            <input name='strain' type='text'>
         </label>
 
         <label> Classification
-            <input name='classification'>
+            <select name='classification'>
+                <option name='classification' value='Indica'>Indica</option>
+                <option name='classification' value='Sativa'>Sativa</option>
+                <option name='classification' value='Hybrid'>Hybrid</option>
+                
+            </select>
         </label>
 
         <label> THC % 
-            <input name='cannabanoidsTHC'>
+            <input name='cannabanoidsTHC' type='number' min=1 max=35>
         </label>
 
         <label> CBD % 
-            <input name='cannabanoidsCBD'>
+             <input name='cannabanoidsCBD' type='number' >
         </label>
 
-        <label> SKU
-            <input name='sku'>
-        </label>
+     
+            <fieldset name='terpenes'>
+            <label>
+                <input name='terpenes' type='checkbox' value='Myrcene'>Myrcene
+            </label>
+            <label>
+                <input name='terpenes' type='checkbox' value='Caryophyllene'>Caryophyllene
+            <label>
+            <label>
+                <input name='terpenes' type='checkbox' value='Limonene'>Limonene 
+            </label>
+            <label>
+                <input name='terpenes' type='checkbox' value='Pinene'>Pinene
+            </label>
+            <label>
+                <input name='terpenes' type='checkbox' value='Terpinolene'>Terpinolene
+            </label>
+            <label>
+                <input name='terpenes' type='checkbox' value='Linalool'>Linalool    
+            </label>            
+            </fieldset>
+      
 
-        <label> Top Terpenes
-            <input name='terpenes'>
+        <label> Qty
+            <input name='qty' type='number' placeholder='Please see your manager if unsure'>
         </label>
 
         <label> Price
-            <input name='price'>
+            <input name='price' type='number' min=1 max=15>
         </label>
 
-        <label> Stock
-            <input name='stock'>
-        </label>
             <button type='submit' class='new-product-submit-btn'> Submit </button>
     </form>
         

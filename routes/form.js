@@ -3,8 +3,8 @@ var router = express.Router();
 const float = require("../app.js");
 const arr = [];
 
-const flower = require("../flower");
-const concentrate = require("../concentrates");
+const Flower = require("../flower");
+const Concentrate = require("../concentrates");
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
@@ -14,6 +14,8 @@ router.get("/", function (req, res, next) {
 });
 
 console.log("this works");
+
+
 router.post("/", (req, res) => {
   const productType = req.body.type;
   const strain = req.body.strain;
@@ -22,15 +24,14 @@ router.post("/", (req, res) => {
   const cannabanoidCBD = req.body.cannabanoidsCBD;
   const sku = req.body.sku;
   const terpenes = req.body.terpenes;
-  const formattedTerps = terpenes.split(",");
+  const formattedTerps = terpenes;
   const price = req.body.price;
   const stock = req.body.stock;
 
 
-  if(productType === 'flower') {
+  if(productType === 'Flower') {
   runFlower(
     null,
-    productType,
     strain,
     classification,
     cannabanoidTHC,
@@ -40,10 +41,9 @@ router.post("/", (req, res) => {
     price,
     stock
   );}
-  else {
+  else if (productType === 'Concentrate') {
     run(
       null,
-      productType,
       strain,
       classification,
       cannabanoidTHC,
@@ -58,7 +58,6 @@ router.post("/", (req, res) => {
 
 const run = async (
   err,
-  productType,
   strain,
   classification,
   cannabanoidsTHC,
@@ -69,7 +68,7 @@ const run = async (
   stock
 ) => {
   try {
-    const OGKush = await concentrate.create({
+    const OGKush = await Concentrate.create({
       strainName: strain,
       classification: classification,
       cannabanoids: {
@@ -90,7 +89,6 @@ const run = async (
 };
 const runFlower = async (
   err,
-  productType,
   strain,
   classification,
   cannabanoidsTHC,
@@ -101,7 +99,7 @@ const runFlower = async (
   stock
 ) => {
   try {
-    const OGKush = await flower.create({
+    const OGKush = await Flower.create({
       strainName: strain,
       classification: classification,
       cannabanoids: {
