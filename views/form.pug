@@ -13,32 +13,41 @@
     <body>
     p #{title}
     <form class='formWrap' method="POST" action='/form'>
+
+        <label> Type
+            <input name='type'>
+        </label>
+
         <label> Strain
             <input name='strain'>
         </label>
 
         <label> Classification
-            <input>
+            <input name='classification'>
         </label>
 
-        <label> Cannabanoids 
-            <input>
+        <label> THC % 
+            <input name='cannabanoidsTHC'>
+        </label>
+
+        <label> CBD % 
+            <input name='cannabanoidsCBD'>
         </label>
 
         <label> SKU
-            <input>
+            <input name='sku'>
         </label>
 
         <label> Top Terpenes
-            <input>
+            <input name='terpenes'>
         </label>
 
         <label> Price
-            <input>
+            <input name='price'>
         </label>
 
         <label> Stock
-            <input>
+            <input name='stock'>
         </label>
             <button type='submit' class='new-product-submit-btn'> Submit </button>
     </form>

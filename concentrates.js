@@ -3,29 +3,29 @@ const mongoose = require('mongoose');
 const concentrateSchema = new mongoose.Schema({
   strainName: {
     type: String, 
-    required: true
+    // required: true
   },
   classification: String,
-  consistency: {
-    type: String, 
-    required: true
-  },
+  // consistency: {
+  //   type: String, 
+  //   required: true
+  // },
   cannabanoids: {
     THC:Number,
     CBD: Number
   },
   SKU: {
     type:Number,
-    required:true
+    // required:true
 },
   topTerpenes: [String],
   price:  {
     type:Number,
-    required:true
+    // required:true
 },
   stock:  {
     type:Number,
-    required:true
+    // required:true
 },
   similarTo: mongoose.SchemaTypes.ObjectId,
   lastUpdated: {
