@@ -15,18 +15,18 @@
     <form class='formWrap' method="POST" action='/form'>
 
         <label> Type
-            <select name='type'>
+            <select name='type' required>
                 <option name='type' value='Concentrate'>Concentrate</option>
                 <option name='type' value='Flower'>Flower</option>
             </select>
         </label>
 
-        <label> Strain
-            <input name='strain' type='text'>
+        <label> Strain and Product Type
+            <input name='strain' type='text' placeholder='Ex: OG Kush Budder/Flower' required>
         </label>
 
         <label> Classification
-            <select name='classification'>
+            <select name='classification' required>
                 <option name='classification' value='Indica'>Indica</option>
                 <option name='classification' value='Sativa'>Sativa</option>
                 <option name='classification' value='Hybrid'>Hybrid</option>
@@ -35,15 +35,15 @@
         </label>
 
         <label> THC % 
-            <input name='cannabanoidsTHC' type='number' min=1 max=35>
+            <input name='cannabanoidsTHC' step=".01" type='number' min=1 max=100 palceholder='Ex: 22%' required>
         </label>
 
         <label> CBD % 
-             <input name='cannabanoidsCBD' type='number' >
+             <input name='cannabanoidsCBD' step=".01" type='number' palceholder='Ex: 0.05%'>
         </label>
 
      
-            <fieldset name='terpenes'>
+            <fieldset name='terpenes'>Top 3 Terpenes
             <label>
                 <input name='terpenes' type='checkbox' value='Myrcene'>Myrcene
             </label>
@@ -65,12 +65,12 @@
             </fieldset>
       
 
-        <label> Qty
-            <input name='qty' type='number' placeholder='Please see your manager if unsure'>
+        <label> Qty In Grams
+            <input name='qty' type='number' step=".01" placeholder='Ex: 3.5' min=1 max=28 required>
         </label>
 
         <label> Price
-            <input name='price' type='number' min=1 max=15>
+            <input name='price' step=".01" type='number' placeholder='Ex: 30.00' min=1 required>
         </label>
 
             <button type='submit' class='new-product-submit-btn'> Submit </button>

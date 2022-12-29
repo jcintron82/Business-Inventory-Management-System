@@ -55,62 +55,10 @@ app.listen(5000, () => {
 // app.use(connectLiveReload());
 
 const mongoose=require('mongoose');
-mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority')
-
-const flower = require('./flower');
-const concentrate = require('./concentrates')
+mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority');
 
 
 
-
-const run = async (err) => {
-
-  try {
-const OGKush = await concentrate.create({ 
-  strainName: 'Blue Dream',
-  classification: 'Indica',
-  consistency: 'Budder',
-  cannabanoids: {
-    THC:20,
-    CBD:5
-  },
-  SKU: 001,
-  topTerpenes: ['Myrcene', 'Limonene' ],
-  price: 35,
-  stock: 5,
-  // similarTo: mongoose.SchemaTypes.ObjectId
-}
-) 
-console.log(OGKush)
-runConcentrates();}
-catch (err) {
-  console.log(err.message)
-}
-}
-
-const runConcentrates = async (err) => {
-  try {
-  const OGBudder = await new concentrate.create({
-    strainName: 'OG Kush Budder',
-    classification: 'Indica',
-    consistency: 'Budder',
-    cannabanoids: {
-      THC:80,
-      CBD:1
-    },
-    SKU: 0001,
-    topTerpenes: ['Myrcene', 'Limonene' ],
-    price: 60,
-    stock: 5,
-    // similarTo: mongoose.SchemaTypes.ObjectId
-  })
-console.log(OGBudder)
-}
-  catch (err) {
-    console.log(err.message);
-  }
-}
-runConcentrates()
 
 
 module.exports = app;
