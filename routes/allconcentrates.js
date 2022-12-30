@@ -1,24 +1,22 @@
 var express = require('express');
-const { db } = require('../flower');
 var router = express.Router();
 
-
+const units = [];
 const Flower = require("../flower");
 const Concentrate = require("../concentrates");
 
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
+router.get('/', function(req, res, next) {
 
   const data = Concentrate.find({}, (err, cursor) => {
-    dataFloat = '';
+    units.splice(0)
     cursor.forEach((dataset) => {
-    console.log(dataset);
-    dataFloat = dataset;
+    units.push(dataset)
+    console.log(units)
     })
-    res.render('index', { 
-    title: dataFloat.strainName,
-    classification: dataFloat.classification })
+    res.render('concentrates', { 
+    title: units })
   })
 })
 

@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- h1 Strain: #{title}
+  //- p Classification: #{classification}
   a(class='button' href='/form') Form
+  <section>
+    each unit in title
+      <h3 class='userDiv'> Strain:</h3><span class='nameDiv'>#{unit.strainName}</span>
+  </section>

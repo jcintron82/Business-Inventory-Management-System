@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  //- h1 Strain: #{title}
+  //- p Classification: #{classification}
+  a(class='button' href='/form') NO Form
+  <section>
+    <div> 
+        each unit in title
+            <div class='productWrapper'>
+                <h3 class='userDiv'>Strain:</h3><span class='nameDiv'>#{unit.strainName}</span>
+                <h3 class='userDiv'>Class:</h3><span class='nameDiv'>#{unit.classification}</span>
+            </div>
+    </div>
+  </section>

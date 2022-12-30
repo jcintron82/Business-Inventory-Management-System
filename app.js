@@ -6,10 +6,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/form');
+var concentratesRouter = require('./routes/allconcentrates');
 
 var app = express();
 
-const funcFloat = {}; 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -22,6 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/form', usersRouter);
+app.use('/concentrates', concentratesRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
