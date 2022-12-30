@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/form');
-var concentratesRouter = require('./routes/allconcentrates');
+var concentratesRouter = require('./routes/allconcentrates.js');
 
 var app = express();
 

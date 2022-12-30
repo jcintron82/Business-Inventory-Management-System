@@ -17,7 +17,8 @@ router.get('/home', function(req, res, next) {
   //   dataFloat = dataset;
   //   })
     res.render('index', { 
-    title: 'dataFloat.strainName' })
+    title: 'dataFloat.strainName',
+    classification: dataFloat.classification })
   })
 // })
 
