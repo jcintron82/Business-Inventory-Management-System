@@ -1,0 +1,55 @@
+.bodyWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productWrapper{
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 95vw;
+
+}
+.productImgWrap {
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+
+}
+.nameAndPriceFlexWrap{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.productNameWrap{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    width: 52vw;
+}
+.productNameDiv{
+    display: flex;
+    font-size: 1em;
+}
+.thcPercentWrap{
+    display: flex;
+    font-size: .5em;
+}
+.thcPercentDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productClassificationDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.priceWrap{
+
+}

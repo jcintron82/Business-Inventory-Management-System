@@ -1,15 +1,34 @@
-extends layout
-
-block content
-  //- h1 Strain: #{title}
-  //- p Classification: #{classification}
-  a(class='button' href='/form') NO Form
-  <section>
-    <div> 
-        each unit in title
-            <div class='productWrapper'>
-                <h3 class='userDiv'>Strain:</h3><span class='nameDiv'>#{unit.strainName}</span>
-                <h3 class='userDiv'>Class:</h3><span class='nameDiv'>#{unit.classification}</span>
-            </div>
-    </div>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        //- <meta http-equiv="refresh" content="3" >
+        <title>#{ title }</title>
+        style 
+            include ../public/stylesheets/allproductspage.css
+    </head>
+        a(class='button' href='/form') NO Form
+    <body class='bodyWrapper'>
+    <section>
+        <div class='mainWrap'> 
+            each unit in product
+                <div class='productWrapper'>
+                <div class='productImgWrap'>img </div>
+                <span class='nameAndPriceFlexWrap'>
+                <section class='productNameWrap'>
+                    <h2 class='productNameDiv'><span class='nameDiv'>#{unit.strainName} #{unit.qty}G</span></h2>
+                <div class='thcPercentWrap'>
+                    <h3 class='productClassificationDiv'>#{unit.classification}</h3>
+                    <h3 class='thcPercentDiv'>THC: #{unit.cannabanoids.THC}</h3>                             
+                </div>
+                </section>
+                <div class='priceWrap'>
+                    <h3 class='userDiv'> Price:</h3><span class='nameDiv'>#{unit.price}</span>
+                </div>
+                </span>
+                </div>
+        </div>
+    </section>
+    </body>

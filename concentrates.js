@@ -15,7 +15,7 @@ const concentrateSchema = new mongoose.Schema({
     CBD: Number
   },
   topTerpenes: [String],
-  SKU: {
+  qty: {
     type:Number,
     // required:true
 },

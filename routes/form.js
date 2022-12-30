@@ -1,7 +1,5 @@
 var express = require("express");
 var router = express.Router();
-const float = require("../app.js");
-const arr = [];
 
 const Flower = require("../flower");
 const Concentrate = require("../concentrates");
@@ -22,7 +20,7 @@ router.post("/", (req, res) => {
   const classification = req.body.classification;
   const cannabanoidTHC = req.body.cannabanoidsTHC;
   const cannabanoidCBD = req.body.cannabanoidsCBD;
-  const sku = req.body.sku;
+  const qty = req.body.qty;
   const terpenes = req.body.terpenes;
   const formattedTerps = terpenes;
   const price = req.body.price;
@@ -36,7 +34,7 @@ router.post("/", (req, res) => {
     classification,
     cannabanoidTHC,
     cannabanoidCBD,
-    sku,
+    qty,
     formattedTerps,
     price,
     stock
@@ -48,7 +46,7 @@ router.post("/", (req, res) => {
       classification,
       cannabanoidTHC,
       cannabanoidCBD,
-      sku,
+      qty,
       formattedTerps,
       price,
       stock)
@@ -62,27 +60,25 @@ const run = async (
   classification,
   cannabanoidsTHC,
   cannabanoidsCBD,
-  SKU,
+  qty,
   topTerpenes,
   price,
   stock
 ) => {
   try {
-    const OGKush = await Concentrate.create({
+    const newProduct = await Concentrate.create({
       strainName: strain,
       classification: classification,
       cannabanoids: {
         THC: cannabanoidsTHC,
         CBD: cannabanoidsCBD,
       },
-      SKU: SKU,
+      qty: qty,
       topTerpenes: topTerpenes,
       price: price,
       stock: stock,
       // similarTo: mongoose.SchemaTypes.ObjectId
     });
-    console.log(OGKush);
-    console.log("Function works");
   } catch (err) {
     console.log(err.message);
   }
@@ -93,27 +89,26 @@ const runFlower = async (
   classification,
   cannabanoidsTHC,
   cannabanoidsCBD,
-  SKU,
+  qty,
   topTerpenes,
   price,
   stock
 ) => {
   try {
-    const OGKush = await Flower.create({
+    const newProduct = await Flower.create({
       strainName: strain,
       classification: classification,
       cannabanoids: {
         THC: cannabanoidsTHC,
         CBD: cannabanoidsCBD,
       },
-      SKU: SKU,
+      qty: qty,
       topTerpenes: topTerpenes,
       price: price,
       stock: stock,
       // similarTo: mongoose.SchemaTypes.ObjectId
     });
-    console.log(OGKush);
-    console.log("Function works");
+
   } catch (err) {
     console.log(err.message);
   }

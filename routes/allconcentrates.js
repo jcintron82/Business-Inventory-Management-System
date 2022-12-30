@@ -1,7 +1,8 @@
 var express = require('express');
+const { db } = require('../flower');
 var router = express.Router();
 
-const units = [];
+const concUnits = [];
 const Flower = require("../flower");
 const Concentrate = require("../concentrates");
 
@@ -10,13 +11,12 @@ const Concentrate = require("../concentrates");
 router.get('/', function(req, res, next) {
 
   const data = Concentrate.find({}, (err, cursor) => {
-    units.splice(0)
+    concUnits.splice(0);
     cursor.forEach((dataset) => {
-    units.push(dataset)
-    console.log(units)
+    concUnits.push(dataset)
     })
     res.render('concentrates', { 
-    title: units })
+    product: concUnits})
   })
 })
 
