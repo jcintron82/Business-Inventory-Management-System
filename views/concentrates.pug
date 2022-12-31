@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         //- <meta http-equiv="refresh" content="2" >
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
         <title>#{ title }</title>
         style 
             include ../public/stylesheets/allproductspage.css
@@ -18,10 +19,10 @@
                 <div class='productImgWrap'>img </div>
                 <span class='nameAndPriceFlexWrap'>
                 <section class='productNameWrap'>
-                    <h2 class='productNameDiv'><span class='nameDiv'>#{unit.strainName} #{unit.qty}G</span></h2>
+                    <h2 class='productNameDiv'>#{unit.strainName} #{unit.qty}G</h2>
                 <div class='thcPercentWrap'>
-                    <h3 class='productClassificationDiv'>#{unit.classification}</h3>
-                    <h3 class='thcPercentDiv'>THC: #{unit.cannabanoids.THC}</h3>                             
+                    <h3 class='productClassificationDiv'>#{unit.classification}</h3><span class="dot"></span>
+                    <h3 class='thcPercentDiv'>THC: #{unit.cannabanoids.THC}%</h3>                             
                 </div>
                 </section>
                 <div class='priceWrap'>

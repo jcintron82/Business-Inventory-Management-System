@@ -6,11 +6,13 @@
 }
 
 .productWrapper{
-    border-style: solid;
+    border-style: solid none none;
     border-color: black;
+    border-width: 1px;
     display: flex;
     flex-direction: row-reverse;
     width: 95vw;
+    padding: 1.5rem 0;
 
 }
 .productImgWrap {
@@ -30,37 +32,58 @@
 .productNameWrap{
     display: flex;
     flex-direction: column;
-    border-style: solid;
-    border-color: black;
     width: 52vw;
     background-color: #FAFAFA;
+    justify-content: flex-start
 }
 .productNameDiv{
     display: flex;
     font-size: 1em;
     background-color: #FAFAFA;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+
 }
 .thcPercentWrap{
     display: flex;
     font-size: .5em;
     background-color: #FAFAFA;
+    max-width: 8rem;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-content: flex-start;
 }
 .thcPercentDiv{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FAFAFA;
+    font-size: 1.1em;
+    color: #969EA5;
+
+    
 }
 .productClassificationDiv{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #FAFAFA;
+    font-size: 1.1em;
+    color: #969EA5;
 }
+.dot {
+    height: 7.5px;
+    width: 7.5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 .25rem;
+  }
 .priceWrap{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: .5rem ;
+    margin: .5rem 0 ;
     min-width: 8rem;
     height: 100%;
     border-radius: 6px;
@@ -70,10 +93,10 @@
     align-self: flex-start;
 }
 .priceWrapGramDiv{
-    font-size: 11px;
+    font-size: .7em;
 }
 .priceDiv{
-    text-align: center;
+    text-align: left;
     margin: .25rem;
     letter-spacing: .25px;
     background-color: rgb(234, 239, 242);
