@@ -1,10 +1,4 @@
-.searchBar{
-    background-color: grey;
-    width: 100vw;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
+
 .navbar{
     display:flex;
     justify-content: space-between;
@@ -16,20 +10,36 @@
 
 }
 .brandTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.5em;
     margin: .25rem;
+    align-self: center;
+    width:10vw
 }
 
-.navbarLinks ul {
-    display: flex;
-    align-self: flex-end;
-    list-style-type: none;
-    
-}
 .navbarLinks{
-    padding: .55rem 5rem;
-    border-color: black;
-    border-style: solid;
-    
+   display: none;
+}
+.hamburgerIcon{
+    display: block;
 }
 
+@media(min-width:1224px){
+    .linksWrap{
+        display: flex;
+        width:50vw
+    }
+    .navbarLinks{
+        display: flex;
+        justify-content: center;
+        padding: .55rem 5vw;
+        border-color: black;
+        border-style: solid; 
+        width: 30%; 
+    }
+    .hamburgerIcon{
+        display: none;;
+    }
+}

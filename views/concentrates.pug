@@ -11,17 +11,21 @@
             include ../public/stylesheets/allproductspage.css
             include ../public/stylesheets/searchbar.css
     </head>
-        a(class='button' href='/form') NO Form
-    <span class='searchBar'>
+        a(class='button' href='/form') NO Form  
     <nav class='navbar'>
-        <div class='brandTitle'>Logo</div>
-        <div>
+        <div class='brandTitle'>Logo <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H8A2,2 0 0,1 6,16V4A2,2 0 0,1 8,2H20M17,7A3,3 0 0,0 14,4A3,3 0 0,0 11,7A3,3 0 0,0 14,10A3,3 0 0,0 17,7M8,15V16H20V15C20,13 16,11.9 14,11.9C12,11.9 8,13 8,15Z" />
+            </svg></div>
+        <div class='linksWrap'>
+            <svg class='hamburgerIcon' style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+            </svg>
             a(class='navbarLinks' href='/home') Home
             a(class='navbarLinks' href='/home') Flower
             a(class='navbarLinks' href='/concentrates') Concentrates
+        </div>
     </nav>
-    </span>
-    <h1 class='productTypeHeader'>All Concentrates</h1> 
+    <h1 class='productTypeHeader'>All Concentrates <div>Search Bar</div></h1> 
     <body class='bodyWrapper'>
     <section>
         <div class='mainWrap'> 
