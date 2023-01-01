@@ -22,11 +22,43 @@
 .navbarLinks{
    display: none;
 }
+.navbarLinks.burgerMenu {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    position: relative;
+    height: 5rem;
+    width: 100vw;
+    color: white;
+}
+.linksWrap.burgerMenu{  
+    position:fixed;
+    top:0;
+    bottom:0;
+    left: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color:white;
+    background-color: grey;
+    height: 10rem;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+}
+
 .hamburgerIcon{
     display: block;
 }
-
-@media(min-width:1224px){
+.burgerMenuWrap.active{
+    display: flex;
+    background-color: grey;
+    width: 65vw;
+    justify-content: flex-end;
+    padding: .5rem .25rem 1rem 0;
+}
+@media(min-width:1224px) {
     .linksWrap{
         display: flex;
         width:50vw
