@@ -4,7 +4,12 @@
     flex-direction: column;
     align-items: center;
 }
-
+.productTypeHeader{
+    width:95vw;
+    text-align: left;
+    margin-bottom: .5rem;
+    font-size: .9em;;
+}
 .productWrapper{
     border-style: solid none none;
     border-color: black;

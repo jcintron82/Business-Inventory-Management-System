@@ -9,8 +9,19 @@
         <title>#{ title }</title>
         style 
             include ../public/stylesheets/allproductspage.css
+            include ../public/stylesheets/searchbar.css
     </head>
         a(class='button' href='/form') NO Form
+    <span class='searchBar'>
+    <nav class='navbar'>
+        <div class='brandTitle'>Logo</div>
+        <div>
+            a(class='navbarLinks' href='/home') Home
+            a(class='navbarLinks' href='/home') Flower
+            a(class='navbarLinks' href='/concentrates') Concentrates
+    </nav>
+    </span>
+    <h1 class='productTypeHeader'>All Concentrates</h1> 
     <body class='bodyWrapper'>
     <section>
         <div class='mainWrap'> 
