@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/form');
 var concentratesRouter = require('./routes/allconcentrates.js');
-
+var loginPageRouter = require('./routes/loginpage.js');
 var app = express();
 
 
@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/form', usersRouter);
 app.use('/concentrates', concentratesRouter);
+app.use('/loginpage', loginPageRouter);
 
 
 
@@ -60,10 +61,6 @@ app.listen(5000, () => {
 
 const mongoose=require('mongoose');
 mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority');
-
-
-
-
 
 module.exports = app;
 
