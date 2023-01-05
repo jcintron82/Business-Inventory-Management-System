@@ -13,6 +13,14 @@ The project skeleton is originally spun up using express-generator with Pug as t
 ![0](https://user-images.githubusercontent.com/71289948/210195002-4a177849-31c1-44b2-b949-82c6cca5161a.jpg)
 
 **Other Examples:**
+
 Take a look at these other examples of my work below:
 
-Bulletin Board: https://github.com/jcintron82/Bulletin-Board
+**PostIt! Dev Bulletin Board:** 
+https://github.com/jcintron82/Bulletin-Board
+
+**Velgara Excavating:**
+https://github.com/jcintron82/Velgara-Excavating
+
+**Magnolia Marketplace**
+https://github.com/jcintron82/Magnolia-Marketplace
