@@ -13,23 +13,22 @@
     <body class='body'>
         - let user = { name: 'Juan', loggedIn: true }
         if user.loggedIn 
-            h2.green Welcome #{login}
+            h2.green Welcome Back #{login} 
         else 
            h2 Please Log-In
 
    
     <div class=formTabsWrap>
-    <span>Need an account?<a href='/register'>Register</a>
+    <span class=registerheader>New employee? <a href='/register'>Register</a>
     //- <button id=signuptab>Sign Up</button>
     </span>
-        <form id=loginform class='loginForm' method="GET" action=/loginpage>  Employee Login
+        <form id=loginform class='loginForm' method="POST" action=/loginpage>  Employee Login
             <label for='username'>Username </label>
-                <input name='username'>
-            </label>
-            <label for='password'>Password 
-                <input name='password'>    
-            </label>
-            <button class=submitbtn type='submit'>Log-In</button>
+                <input required name='username' type=text>
+            
+            <label for='password'>Password </label>
+                <input required name='password'>    
+            <button class=submitbtn type='submit' type=text>Log-In</button>
         </form>
     </div>
     </body>

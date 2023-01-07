@@ -8,6 +8,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const User = require("./schemas/newuserschema");
 
+
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/form');
 var concentratesRouter = require('./routes/allconcentrates.js');
@@ -19,6 +22,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -32,10 +36,15 @@ app.use('/concentrates', concentratesRouter);
 app.use('/loginpage', loginPageRouter);
 app.use('/register', registerPageRouter);
 
+//Note to self - At this point the console.logs shows that the user is being retrieved by the
+//strategy in app.js but for some reason isnt posting to /loginpage.js
 //Passport Middleware Functions
 passport.use(
-  new LocalStrategy((username, password, done) => {
+  new LocalStrategy(( username, password, done) => {
+
     User.findOne({ username: username }, (err, user) => {
+      console.log(user)
+      console.log('app.js - Username is: ' + user.username)
       if (err) { 
         return done(err);
       }
@@ -50,37 +59,40 @@ passport.use(
   })
 );
 
-passport.serializeUser(function(user, done) {
-  done(null, user.username);
-});
-
-// passport.deserializeUser(function(user, done) {
-//   return done(null, user);
+// passport.serializeUser(function(user, done) {
+//   done(null, user.username);
+// });
+// passport.deserializeUser(function(username, done) {
+//   User.findById(username, function(err, username) {
+//     done(err, username);
+//     console.log('ok')
+//   });
+  
 // });
 
-passport.deserializeUser(function(user, done) {
-  User.findById(username, function(err, user) {
-    done(err, user);
-  });
-
-  
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
 });
 
-app.post(
-  "/loginpage",
-  passport.authenticate("local", {
-    successRedirect: "/loginpage",
-    failureRedirect: "/registerpage"
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
     
-  })
-);
+  });
+});
 
 app.use(session({ secret: "cats", resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.urlencoded({ extended: false }));
 
-
+app.post(
+  "/loginpage",
+  passport.authenticate("local", {
+    successRedirect: "/loginpage",
+    failureRedirect: "/register",
+  }),
+);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

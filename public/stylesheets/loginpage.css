@@ -1,13 +1,25 @@
 
 .body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+h2 {
+    align-self: center
+}
 .formTabsWrap{
-    border-style: solid;
-    border-color: lightblue;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    width: 75%;
+    max-width: 40rem;;
+}
+.registerheader{
+    padding-bottom: .5rem;
+    align-self: flex-start;
 }
 .loginForm{
     border-style: solid;
@@ -17,8 +29,8 @@
     align-items: center;
     flex-direction: column;
     height: 50vh;
-    width: 50vw;
-    max-width: 40rem;
+    width: 100%;
+    border-radius: 6px;
 }
 .loginform.hide {
     display: none;
@@ -33,15 +45,12 @@ label{
 input{
     border-radius: 10px;
     margin-left: .25rem;
-    width: 55vw;
-    max-width: 10rem;
-    height: 3vh;
+    width: 50%;
+    max-width: 20rem;
+    height: 3.5vh;
 }
 .submitbtn{
-    width: 50px;
+    margin-top: .75rem;
+    width: 5rem;
     height: 5vh;
-}
-
-.signupform{
-    display: block;
 }

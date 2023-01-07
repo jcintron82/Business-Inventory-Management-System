@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signupform{
+    display: flex;
+    width: 30vw;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-style: solid;
+    border-color: black;;
+   
+}
+.registerbtn{
+    margin-top: .5rem;
+}

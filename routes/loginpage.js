@@ -1,17 +1,18 @@
-const { json } = require('express');
 var express = require('express');
 var router = express.Router();
-const newUser = require("../schemas/newuserschema");
 
 managerIDs = [1,2];
 
+
 /* GET login page. */
 router.get('/', function(req, res, next) {
+  const x = req.user
     res.render('loginpage', { 
-    login: req.user
+    login: x
     
      });
-     console.log(req.user)
+
+   console.log('loginpage.js - Username is: ' + req.user)
      
   })
 module.exports = router;

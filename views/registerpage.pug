@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
         <title>#{ title }</title>
         style 
-            include ../public/stylesheets/loginpage.css
+            include ../public/stylesheets/registerpage.css
     </head>
     <body class='body'>
         //- - let user = { name: 'Juan', loggedIn: true }
@@ -24,15 +24,15 @@
     </span>
         <form id=newuserform class='signupform' method="POST" action='/register'>  New User
             <label for='username'>Username </label>
-                <input name='newusername'>
-            </label>
-            <label for='password'>Password 
-                <input name='newpassword'>    
-            </label>
-             <label for='managerid'>Manager ID 
+                <input required name='newusername'>
+
+            <label for='password'>Password </label>
+                <input required name='newpassword'>  
+
+            <label for='managerid'>Manager ID </label>
                 <input name='managerid'>    
-            </label>
-            |<button class=submitbtn type='submit'>Sign-Up</button>
+      
+            |<button class=registerbtn type='submit'>Sign-Up</button>
         </form>
     </div>
     </body>
