@@ -11,25 +11,28 @@
             include ../public/stylesheets/loginpage.css
     </head>
     <body class='body'>
-        - let user = { name: 'Juan', loggedIn: true }
-        if user.loggedIn 
-            h2.green Welcome #{login}
-        else 
-           h2 Please Log-In
+        //- - let user = { name: 'Juan', loggedIn: true }
+        //- if user.loggedIn 
+        //-     h2.green Welcome #{login}
+        //- else 
+        //-    h2 Please Log-In
 
    
     <div class=formTabsWrap>
-    <span>Need an account?<a href='/register'>Register</a>
+    <span>Already a user? <a href='/loginpage'>Log-In</a>
     //- <button id=signuptab>Sign Up</button>
     </span>
-        <form id=loginform class='loginForm' method="GET" action=/loginpage>  Employee Login
+        <form id=newuserform class='signupform' method="POST" action='/register'>  New User
             <label for='username'>Username </label>
-                <input name='username'>
+                <input name='newusername'>
             </label>
             <label for='password'>Password 
-                <input name='password'>    
+                <input name='newpassword'>    
             </label>
-            <button class=submitbtn type='submit'>Log-In</button>
+             <label for='managerid'>Manager ID 
+                <input name='managerid'>    
+            </label>
+            |<button class=submitbtn type='submit'>Sign-Up</button>
         </form>
     </div>
     </body>

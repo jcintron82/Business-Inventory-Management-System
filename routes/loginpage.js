@@ -1,28 +1,41 @@
 var express = require('express');
 var router = express.Router();
-const Login = require("../schemas/loginSchema");
+const newUser = require("../schemas/newuserschema");
+
+managerIDs = [1,2];
+
 /* GET login page. */
 router.get('/', function(req, res, next) {
     res.render('loginpage', { 
-    title: 'Hi',
-     })
+    login: 'Name'
+    
+     });
+     console.log(req.user.userna)
+     
   })
 
+//Everything below is to register
 router.post('/', (req, res, next) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  postNewUser(username, password)
-  res.redirect('/loginpage')
+  const username = req.body.newusername;
+  const password = req.body.newpassword;
+  // const managerID = req.body.managerid;
+  // const id = logins.find({ managerID: managerID }, (err, cursor) => {
+  //   if(err) throw err;
+  //   managerIDs.forEach(() => {
+      
+  //   })
+      postNewUser(username, password)
+      res.redirect('/loginpage')
+  })
 
-})
 const postNewUser = async (
   username,
-  password
+  password,
 ) => {
   try {
-    await Login.create({
+    await newUser.create({
       username: username, 
-      password: password
+      password: password,
     })
   }
   catch (err) {

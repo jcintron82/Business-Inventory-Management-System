@@ -1,13 +1,18 @@
 var createError = require('http-errors');
 var express = require('express');
+const session = require("express-session");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const User = require("./schemas/newuserschema");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/form');
 var concentratesRouter = require('./routes/allconcentrates.js');
 var loginPageRouter = require('./routes/loginpage.js');
+var registerPageRouter = require('./routes/register.js');
 var app = express();
 
 
@@ -25,13 +30,54 @@ app.use('/', indexRouter);
 app.use('/form', usersRouter);
 app.use('/concentrates', concentratesRouter);
 app.use('/loginpage', loginPageRouter);
+app.use('/register', registerPageRouter);
 
+//Passport Middleware Functions
+passport.use(
+  new LocalStrategy((username, password, done) => {
+    User.findOne({ username: username }, (err, user) => {
+      if (err) { 
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false, { message: "Incorrect username" });
+      }
+      if (user.password !== password) {
+        return done(null, false, { message: "Incorrect password" });
+      }
+      return done(null, user);
+    });
+  })
+);
 
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+app.post(
+  "/loginpage",
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/"
+  })
+
+);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+app.use(session({ secret: "cats", resave: false, saveUninitialized: true }));
+app.use(passport.session());
+app.use(passport.initialize());
+app.use(express.urlencoded({ extended: false }));
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -60,7 +106,9 @@ app.listen(5000, () => {
 // app.use(connectLiveReload());
 
 const mongoose=require('mongoose');
+const { unwatchFile } = require('fs');
 mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority');
+
 
 module.exports = app;
 
