@@ -12,7 +12,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/form');
 var concentratesRouter = require('./routes/allconcentrates.js');
 var loginPageRouter = require('./routes/loginpage.js');
-var registerPageRouter = require('./routes/register.js');
+var registerPageRouter = require('./routes/registerpage');
 var app = express();
 
 
@@ -51,33 +51,40 @@ passport.use(
 );
 
 passport.serializeUser(function(user, done) {
-  done(null, user.id);
+  done(null, user.username);
 });
 
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function(err, user) {
+// passport.deserializeUser(function(user, done) {
+//   return done(null, user);
+// });
+
+passport.deserializeUser(function(user, done) {
+  User.findById(username, function(err, user) {
     done(err, user);
   });
+
+  
 });
 
 app.post(
   "/loginpage",
   passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/"
+    successRedirect: "/loginpage",
+    failureRedirect: "/registerpage"
+    
   })
-
 );
+
+app.use(session({ secret: "cats", resave: false, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(express.urlencoded({ extended: false }));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
-app.use(session({ secret: "cats", resave: false, saveUninitialized: true }));
-app.use(passport.session());
-app.use(passport.initialize());
-app.use(express.urlencoded({ extended: false }));
 
 // error handler
 app.use(function(err, req, res, next) {
