@@ -8,6 +8,14 @@ html, body{
     flex-direction: column;
     align-items: center;
 }
+.mainWrap{
+    background-color: lightgoldenrodyellow;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .productTypeHeader{
     display: flex;
     justify-content: space-between;
@@ -17,19 +25,22 @@ html, body{
     font-size: .9em;;
 }
 .productWrapper{
-    border-style: solid none none;
+    border-style: solid ;
     border-color: black;
     border-width: 1px;
     display: flex;
     flex-direction: row-reverse;
-    width: 95vw;
+    width: 100%;
     padding: 1.5rem 0;
-
+    align-self: center;
+    max-width: 55rem;
 }
 .productImgWrap {
     border-style: solid;
     border-color: black;
     width: 100%;
+    min-width: 3rem;
+    max-width: 30rem;
     background-color: #FAFAFA;
 
 }
@@ -37,13 +48,14 @@ html, body{
     display:flex;
     flex-direction: column;
     width: 100%;
+    max-width:25rem ;
     background-color: #FAFAFA;
 
 }
 .productNameWrap{
     display: flex;
     flex-direction: column;
-    width: 52vw;
+    width: 100%;
     background-color: #FAFAFA;
     justify-content: flex-start
 }
@@ -125,7 +137,19 @@ html, body{
     
 }
 
+/* @media(min-width:1024px){
+    .productWrapper{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nameAndPriceFlexWrap{
+        justify-content: flex-end;
+    }
+    .productNameDiv{
+        justify-content: flex-end;
+    }
 
+} */
 /* * {
     background: #000 !important;
     color: #0f0 !important;
