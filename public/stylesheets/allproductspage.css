@@ -9,7 +9,6 @@ html, body{
     align-items: center;
 }
 .mainWrap{
-    background-color: lightgoldenrodyellow;
     width: 95vw;
     display: flex;
     flex-direction: column;
@@ -25,9 +24,9 @@ html, body{
     font-size: .9em;;
 }
 .productWrapper{
-    border-style: solid ;
-    border-color: black;
-    border-width: 1px;
+    border-bottom: solid ;
+    border-color: rgb(215, 228, 235);
+    border-width: 2px;
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
