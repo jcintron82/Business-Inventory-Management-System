@@ -1,7 +1,38 @@
-extends layout
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        //- <meta http-equiv="refresh" content="2" >
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <title>Aphria - Home</title>
+        style 
+            include ../public/stylesheets/homepage.css
+            include ../public/stylesheets/searchbar.css
+    </head>
 block content
   //- h1 Strain: #{title}
   //- p Classification: #{classification}
-  a(class='button' href='/form') Form
+<body>
+  <article>
+    <span> Placeholder for ad wheel</span>
+  </article>
+  <article class=introblurb>
+    <p>
+      h1 Welcome To Aphria!</h1>
+      p Get exclusive deals, product drops, events, and more!<br> Stay in the know: <a>Click here</a> to sign up or use the QR code in store
+      p Applicable discounts are applied at the time of order to reflect the current promotion. Promotions may be combined with daily savings, everyday discounts, and seasonal sale windows to a maximum value of 30% off.
+  </article>
+  <div class=categoriesaccordian>
+    <ul> Categories
+      <li>Flower</li>
+      <li>Concentrates</li>
+      <li>Edibles</li>
+      <li>Tinctures</li>
+  </div>
+  <article>
+    <span>Placeholder for product wheels</span>
+  </article>
+  </body>
 

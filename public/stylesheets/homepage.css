@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.introblurb{
+    border-style: solid;
+    border-color: black;
+}
+p{
+    border-style: solid;
+    border-color: black;
+}
+ul{
+    display: flex;
+    width: 50vw;
+    ;
+}
+li{
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    list-style-type: none;
+    height: 15vh;
+    width: 25vw;;
+}
+.categoriesaccordian{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+    width: 100%;;
+}
