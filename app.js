@@ -37,7 +37,7 @@ app.use('/loginpage', loginPageRouter);
 app.use('/register', registerPageRouter);
 
 //Note to self - At this point the console.logs shows that the user is being retrieved by the
-//strategy in app.js but for some reason isnt posting to /loginpage.js
+//strategy in app.js but for some reason isnt posting to /login
 //Passport Middleware Functions
 passport.use(
   new LocalStrategy(( username, password, done) => {
@@ -71,13 +71,15 @@ passport.use(
 // });
 
 passport.serializeUser(function(user, done) {
-  done(null, user.id);
+  console.log('Serialized' + user)
+  done(null, user);
 });
 
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function(err, user) {
+passport.deserializeUser(function(user, done) {
+  console.log('Deserialized:' + user)
+  User.findById(user, function(err, user) {
+    console.log('Deserialized:' + user)
     done(err, user);
-    
   });
 });
 
@@ -93,6 +95,13 @@ app.post(
     failureRedirect: "/register",
   }),
 );
+
+app.use(function (req, res, next) {
+  console.log(res.locals.currentUser)
+  res.locals.currentUser = req.user
+  next()
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
