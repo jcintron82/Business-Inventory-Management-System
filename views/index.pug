@@ -11,28 +11,57 @@
             include ../public/stylesheets/homepage.css
             include ../public/stylesheets/searchbar.css
     </head>
-block content
-  //- h1 Strain: #{title}
-  //- p Classification: #{classification}
+<header> 
+      <nav class='navbar'>
+        <div class='brandTitle'><a href='/loginpage'><svg id='loginSVG' style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H8A2,2 0 0,1 6,16V4A2,2 0 0,1 8,2H20M17,7A3,3 0 0,0 14,4A3,3 0 0,0 11,7A3,3 0 0,0 14,10A3,3 0 0,0 17,7M8,15V16H20V15C20,13 16,11.9 14,11.9C12,11.9 8,13 8,15Z" />
+            </svg></a></div><span class=headerlogo><a href='/home'><img class=logoimg src='/images/Aphria.png'></a> </span>
+        <div class='linksWrap' id='linksWrap'>
+            <span class='burgerMenuWrap' id='burgerWrap'>
+                <svg class='hamburgerIcon' id='burger' style="width:34px;height:34px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+            </span>
+            a(class='navbarLinks' href='/home' id='navbarLinks') Home
+            a(class='navbarLinks' href='/home' id='navbarLinks2') Flower
+            a(class='navbarLinks' href='/concentrates' id='navbarLinks3') Concentrates
+            a(class='navbarLinks' href='/concentrates' id='navbarLinks4') Log-In     
+        </div>
+      </nav>
+</header>
 <body>
-  <article>
-    <span> Placeholder for ad wheel</span>
+  <article class=adwheelwrap>
+    <span class=adwheel> Placeholder for ad wheel</span>
   </article>
   <article class=introblurb>
     <p>
       h1 Welcome To Aphria!</h1>
-      p Get exclusive deals, product drops, events, and more!<br> Stay in the know: <a>Click here</a> to sign up or use the QR code in store
-      p Applicable discounts are applied at the time of order to reflect the current promotion. Promotions may be combined with daily savings, everyday discounts, and seasonal sale windows to a maximum value of 30% off.
+      <ul class=    >
+        <li class=blurblistitems> Get exclusive deals, product drops, events, and more!<br> Stay in the know: <a>Click here</a> to sign up or use the QR code in store
+        <li class=blurblistitems> Stop by and ask us about our Mystery specials on your favorites! Mystery Specials: In-store only. New products every Saturday.
+        <li class=blurblistitems> Applicable discounts are applied at the time of order to reflect the current promotion. Promotions may be combined with daily savings, everyday discounts, and seasonal sale windows to a maximum value of 30% off.
+        <li class=blurblistitems> Check out:    <a href='/concentrates'>Daily Specials</a>
+       
+
   </article>
+  <section class=itemsection>
   <div class=categoriesaccordian>
-    <ul> Categories
-      <li>Flower</li>
-      <li>Concentrates</li>
-      <li>Edibles</li>
-      <li>Tinctures</li>
+    <ul class=categoriesul> 
+      <a href='/concentrates'><li class=categorylineitems>Shop<br>Flower<br><img class=categoryimages src='/images/stock.avif'></li></a>
+      <a href='/concentrates'><li class=categorylineitems>Shop<br>Concentrates<br><img class=categoryimages src='/images/stock.avif'></li></a>
+      <a href='/concentrates'><li class=categorylineitems>Shop<br>Edibles<br><img class=categoryimages src='/images/stock.avif'></li></a>
+      <a href='/concentrates'><li class=categorylineitems>Shop<br>Tinctures<br><img class=categoryimages src='/images/stock.avif'></li></a>
   </div>
-  <article>
-    <span>Placeholder for product wheels</span>
-  </article>
+  <article class=featureditemsaccordian>
+    <h3>Featured Items</h3>
+    <ul class=featureditemsul>
+      <a href=/concentrates><li class=featureditemsli> <img class=featuredimages src='/images/stock.avif'>Price<br>OG Kush flower 3.5G<br>Type and THC</li></a>
+      <li class=featureditemsli>oo</li>
+      <li class=featureditemsli>oo</li>
+      <li class=featureditemsli>oo</li>
+      <li class=featureditemsli>oo</li>
+      <li class=featureditemsli>oo</li>
+  </article>   
+  </section>
   </body>
 
