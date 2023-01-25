@@ -32,7 +32,7 @@
 </header>
 <body>
     p New Product Form
-    <form class='formWrap' method="POST" action='/form'>
+    <form enctype='multipart/form-data' class='formWrap' method="POST" action='/form'>
 
         <label> Type
             <select name='type' required>
@@ -92,6 +92,9 @@
         <label> Price
             <input name='price' step=".01" type='number' placeholder='Ex: 30.00' min=1 required>
         </label>
+            <label> Image
+                <input name='image' type='file' >    
+            </label>  
 
             <button type='submit' class='new-product-submit-btn'> Submit </button>
     </form>

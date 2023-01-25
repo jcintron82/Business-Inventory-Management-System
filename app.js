@@ -87,6 +87,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(function(req, res, next) {
+  res.locals.currentUser = req.user;
+  next();
+});
+
 app.post(
   "/loginpage",
   passport.authenticate("local", {
@@ -131,7 +136,18 @@ app.listen(5000, () => {
 //   }, 100);
 // });
 // app.use(connectLiveReload());
-
+var multer = require('multer');
+ 
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+ 
+var upload = multer({ storage: storage });
 const mongoose=require('mongoose');
 const { unwatchFile } = require('fs');
 mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority');

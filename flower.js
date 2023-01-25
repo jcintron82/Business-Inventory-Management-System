@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const multer  = require('multer')
 
 const flowerSchema = new mongoose.Schema({
     strainName: {
@@ -27,6 +28,11 @@ const flowerSchema = new mongoose.Schema({
         type:Number,
         // required:true
     },
+    image:  {
+      data: Buffer,
+    contentType: String,
+      // required:true
+  },
       similarTo: mongoose.SchemaTypes.ObjectId,
       lastUpdated: {
         type: Date,

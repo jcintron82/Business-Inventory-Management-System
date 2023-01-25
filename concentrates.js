@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const multer  = require('multer')
 
 const concentrateSchema = new mongoose.Schema({
   strainName: {
@@ -12,7 +13,8 @@ const concentrateSchema = new mongoose.Schema({
   // },
   cannabanoids: {
     THC:Number,
-    CBD: Number
+    CBD: Number,
+    required: false
   },
   topTerpenes: [String],
   qty: {
@@ -26,6 +28,11 @@ const concentrateSchema = new mongoose.Schema({
   stock:  {
     type:Number,
     // required:true
+},
+image:  {
+  data: Buffer,
+    contentType: String,
+  // required:true
 },
   similarTo: mongoose.SchemaTypes.ObjectId,
   lastUpdated: {

@@ -35,13 +35,23 @@ html, body{
     max-width: 55rem;
 }
 .productImgWrap {
-    border-style: solid;
-    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     min-width: 3rem;
     max-width: 30rem;
     background-color: #FAFAFA;
+    height: 100%;
+    padding: 1vw;
 
+}
+.productimg{
+    height: 100%;
+    width: 85%;
+    max-height: 10rem;
+    max-width: 10rem;
+    border-radius: 50%;
 }
 .nameAndPriceFlexWrap{
     display:flex;
@@ -49,7 +59,7 @@ html, body{
     width: 100%;
     max-width:25rem ;
     background-color: #FAFAFA;
-
+    padding: .5rem;
 }
 .productNameWrap{
     display: flex;
@@ -107,7 +117,6 @@ html, body{
     align-items: center;
     margin: .5rem 0 ;
     min-width: 8rem;
-    height: 100%;
     border-radius: 6px;
     align-self: center;
     background-color: rgb(234, 239, 242);
@@ -123,6 +132,7 @@ html, body{
     letter-spacing: .25px;
     background-color: rgb(234, 239, 242);
     font-size: 1em;
+    padding: .3rem;
 }
 .percentOffWrap{
     width: 100%;
@@ -136,7 +146,6 @@ html, body{
     font-size: .75em;
     
 }
-
 /* @media(min-width:1024px){
     .productWrapper{
         flex-direction: row;
