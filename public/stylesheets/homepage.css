@@ -66,7 +66,7 @@ h1{
 }
 .blurblistitems{
     list-style-type: none;
-    padding: .55rem 0;
+    padding: 1rem 0;
     font-size: 1em;
 }
 .itemsection{
@@ -173,6 +173,12 @@ h1{
 .parallax-break-div{
     background-color: #223127;
     min-height: 30rem;
+}
+.hide{
+    display: block;
+}
+.break-banner{
+    color: red;
 }
 .feauted-items-parallax-wrap{
     background-image: url("images/stock.avif");
