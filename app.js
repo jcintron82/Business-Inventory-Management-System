@@ -44,7 +44,7 @@ passport.use(
 
     User.findOne({ username: username }, (err, user) => {
       console.log(user)
-      console.log('app.js - Username is: ' + user.username)
+      console.log('app.js - Username is: ' )
       if (err) { 
         return done(err);
       }
@@ -76,14 +76,13 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(user, done) {
-  console.log('Deserialized:' + user)
-  User.findById(user, function(err, user) {
+  User.find({username: user.username }, function(err, user) {
+    done(null, user);
     console.log('Deserialized:' + user)
-    done(err, user);
   });
 });
 
-app.use(session({ secret: "cats", resave: false, saveUninitialized: true }));
+app.use(session({ secret: "cats", resave: false, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.urlencoded({ extended: false }));
@@ -91,8 +90,8 @@ app.use(express.urlencoded({ extended: false }));
 app.post(
   "/loginpage",
   passport.authenticate("local", {
-    successRedirect: "/loginpage",
-    failureRedirect: "/register",
+    successRedirect: "/form",
+    failureRedirect: "/loginpage",
   }),
 );
 

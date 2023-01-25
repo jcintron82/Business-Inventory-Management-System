@@ -1,11 +1,17 @@
-
+/* 
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+} */
 .navbar{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: grey;
+    background-color: #658864;
+
     color: white;
-    width: 100%;
+    width: 100vw;
     height: 9vh;;
 
 }

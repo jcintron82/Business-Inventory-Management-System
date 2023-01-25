@@ -11,7 +11,7 @@
             include ../public/stylesheets/homepage.css
             include ../public/stylesheets/searchbar.css
     </head>
-<header> 
+<header class=header> 
       <nav class='navbar'>
         <div class='brandTitle'><a href='/loginpage'><svg id='loginSVG' style="width:24px;height:24px" viewBox="0 0 24 24">
             <path fill="currentColor" d="M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H8A2,2 0 0,1 6,16V4A2,2 0 0,1 8,2H20M17,7A3,3 0 0,0 14,4A3,3 0 0,0 11,7A3,3 0 0,0 14,10A3,3 0 0,0 17,7M8,15V16H20V15C20,13 16,11.9 14,11.9C12,11.9 8,13 8,15Z" />
@@ -28,6 +28,8 @@
             a(class='navbarLinks' href='/concentrates' id='navbarLinks4') Log-In     
         </div>
       </nav>
+      <span><input></span>
+      //- <span class=triangle-banner-wrap><span class=triangle></span></span>
 </header>
 <body>
   <article class=adwheelwrap>
@@ -37,17 +39,17 @@
     <p>
       h1 Welcome To Aphria!</h1>
       <ul class=    >
-        <li class=blurblistitems> Get exclusive deals, product drops, events, and more!<br> Stay in the know: <a>Click here</a> to sign up or use the QR code in store
+        <li class=blurblistitems> Get exclusive deals, product drops, events, and more!<br> <strong>Stay in the know: <a>Click here</a> to sign up or use the QR code in store</strong>
         <li class=blurblistitems> Stop by and ask us about our Mystery specials on your favorites! Mystery Specials: In-store only. New products every Saturday.
         <li class=blurblistitems> Applicable discounts are applied at the time of order to reflect the current promotion. Promotions may be combined with daily savings, everyday discounts, and seasonal sale windows to a maximum value of 30% off.
-        <li class=blurblistitems> Check out:    <a href='/concentrates'>Daily Specials</a>
+        <li class=blurblistitems> Check out: <a href='/concentrates'>Daily Specials</a></li>`
        
 
   </article>
   <section class=itemsection>
   <div class=categoriesaccordian>
     <ul class=categoriesul> 
-      <a href='/concentrates'><li class=categorylineitems>Shop<br>Flower<br><img class=categoryimages src='/images/stock.avif'></li></a>
+      <a href='/concentrates'><li class=categorylineitems><div class=productsheaderwrap><h3 class=productheadershop>Shop<br>Flower<br></h3></div><img class=categoryimages src='/images/stock.avif'></li></a>
       <a href='/concentrates'><li class=categorylineitems>Shop<br>Concentrates<br><img class=categoryimages src='/images/stock.avif'></li></a>
       <a href='/concentrates'><li class=categorylineitems>Shop<br>Edibles<br><img class=categoryimages src='/images/stock.avif'></li></a>
       <a href='/concentrates'><li class=categorylineitems>Shop<br>Tinctures<br><img class=categoryimages src='/images/stock.avif'></li></a>

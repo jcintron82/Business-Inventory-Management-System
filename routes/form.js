@@ -6,7 +6,7 @@ const Concentrate = require("../concentrates");
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
-  res.render("form", { title: "Form" });
+  res.render("form", { title: "Form", employee: req.body.username });
   if (err) throw err;
 });
 
