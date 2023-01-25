@@ -1,8 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+    font-size: 1.75em;
+    font-weight: 400;
+}
 .formWrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-style: solid;
-    align-items: center;
-    border-color: black;
+    justify-content: space-evenly;
+    border: solid #CCCCCC 1px;
+    width: 80%;
+    max-width: 50rem;
+    padding: 1.25rem;
+    background-color: #F5F5F5;
+    margin-bottom: 2.5rem;
+    border-radius: .35rem;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    padding: .5rem .35rem;
+    font-size: 1.25em;
+    font-weight: 400;
+    
+}
+input{
+    border-radius: .35rem;
+    border: solid #CCCCCC 1px;
+    margin-top: .3rem;
+    padding: .25rem;
+}
+select{
+    border-radius: .35rem;
+    border: solid #CCCCCC 1px;
+    margin-top: .3rem;
+    padding: .25rem;
+}
+fieldset{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    padding: .5rem .35rem;
+    font-size: 1.25em;
+    font-weight: 400;
+    border-radius: .35rem;
+}
+.new-product-submit-btn{
+    margin-top: 0.75rem;
+    width: 80%;
+    max-width: 20rem;
+    height: 5vh;
+    background-color: #658864;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.35rem;
+    font-size: 1.25em;
+    align-self: center;
+    letter-spacing: .05rem;
+}
+.new-product-submit-btn:active{
+    background-color: #B7B78A;
+    cursor: pointer;
+    opacity: 5;
+}
+@media(min-width:1024px){
+    .new-product-submit-btn:hover{
+        background-color: #B7B78A;
+        cursor: pointer;
+    }
+    input:hover{
+        cursor: pointer;
+    }
 }

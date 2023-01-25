@@ -57,9 +57,10 @@ input{
     margin-left: .25rem;
     width: 80%;
     max-width: 20rem;
-    height: 4vh;
+    height: 3vh;
     border-radius: .5rem;
     border: solid #CCCCCC 1px;
+    padding: .25rem;
 }
 .submitbtn{
     margin-top: .75rem;

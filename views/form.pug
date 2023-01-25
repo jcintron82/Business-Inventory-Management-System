@@ -28,11 +28,10 @@
             a(class='navbarLinks' href='/concentrates' id='navbarLinks4') Log-In     
         </div>
       </nav>
-      <span><input></span>
       //- <span class=triangle-banner-wrap><span class=triangle></span></span>
 </header>
-    <body>
-    p #{title} Welcome back #{employee}
+<body>
+    p New Product Form
     <form class='formWrap' method="POST" action='/form'>
 
         <label> Type
@@ -63,14 +62,14 @@
              <input name='cannabanoidsCBD' step=".01" type='number' palceholder='Ex: 0.05%'>
         </label>
 
-     
-            <fieldset name='terpenes'>Top 3 Terpenes
+            <span>Top 3 Terpenes</span>
+            <fieldset name='terpenes'>
             <label>
                 <input name='terpenes' type='checkbox' value='Myrcene'>Myrcene
             </label>
             <label>
                 <input name='terpenes' type='checkbox' value='Caryophyllene'>Caryophyllene
-            <label>
+            </label>
             <label>
                 <input name='terpenes' type='checkbox' value='Limonene'>Limonene 
             </label>
@@ -97,6 +96,6 @@
             <button type='submit' class='new-product-submit-btn'> Submit </button>
     </form>
         
-    </body>
+</body>
 
 </html>
