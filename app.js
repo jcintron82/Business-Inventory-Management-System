@@ -100,11 +100,11 @@ app.post(
   }),
 );
 
-app.use(function (req, res, next) {
-  console.log(res.locals.currentUser)
-  res.locals.currentUser = req.user
-  next()
-})
+// app.use(function (req, res, next) {
+//   console.log(res.locals.currentUser)
+//   res.locals.currentUser = req.user
+//   next()
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -136,18 +136,8 @@ app.listen(5000, () => {
 //   }, 100);
 // });
 // app.use(connectLiveReload());
-var multer = require('multer');
  
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads')
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-});
- 
-var upload = multer({ storage: storage });
+
 const mongoose=require('mongoose');
 const { unwatchFile } = require('fs');
 mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority');

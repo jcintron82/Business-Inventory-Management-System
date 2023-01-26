@@ -6,15 +6,22 @@
     width: 100%;
     height: 15vh;;
 }
-html{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 .header{
-    min-width: 100vw;
-}
+    background-image: url("images/drink.avif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    }
 body{
     display: flex;
     flex-direction: column;
@@ -23,21 +30,6 @@ body{
     align-self: center;
     overflow-x: hidden;
     margin: 0;
-    background-image: url("images/homebg.avif");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-}
-
-.adwheelwrap{
-    display: flex;;
-    width: 80vw;
-    align-self: center;
-    max-width: 65rem;
-}
-.adwheel{
-    height: 100%;;
 }
 h1{
     padding-left: 1rem;
@@ -47,7 +39,7 @@ h1{
     flex-direction: column;
     justify-content: space-evenly;
     color: #fafafa;
-    background-color: #223127;
+    background-color: #060000;
     width: 100vw;
     margin: 5rem 0;
     align-self: center;
@@ -71,34 +63,41 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* min-height: 100vh; */
 }
-.categorylineitems{
+.categorylineitemsfood, .categorylineitemsdrinks{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
+    color:white;
     padding: 0.4rem;
-    border-style: solid;
-    border-color: rgba(224,224,224,0.75);
-    border-width: 0.25px;
     list-style-type: none;
     margin: 1rem 0.25rem;
-    background-image: url(/images/stock.avif);
+    background-image: url(/images/foodcategoryimg.avif);
     background-position: center;
     background-size: cover;
     height: 25vh;
-    border-radius: 50%;
-    box-shadow: 4px 4px 5px -2px rgb(224 224 224 / 75%);
+    border-radius: .5rem;
+    /* box-shadow: 4px 4px 5px -2px rgb(224 224 224 / 75%); */
     height: 14rem;
     width: 14rem;
+}
+.categorylineitemsdrinks{
+    background-image: url(/images/drinkscategoryimg.avif);
+
 }
 .categoriesaccordian{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 65rem;
-    padding-bottom: 20vh;
+    padding:1.5rem;
+    background-image: url("images/plates.avif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .categoriesul{
@@ -152,9 +151,7 @@ h1{
 .featureditemsli{
     display: flex;
     flex-direction: column;
-    border-style: solid;
-    border-color: black;
-    border-width: 3px;
+    border: solid #CCCCCC 1px;
     list-style-type: none;
     min-width:8rem;
     margin: .25rem;
@@ -170,48 +167,61 @@ h1{
     padding-top: .25rem;
 }
 .parallax-break-div{
-    background-color: #223127;
+    background-color: #060000;
     min-height: 26.5rem;
     max-height: 30rem;
+    width: 100vw;
+    color: white;
 }
 .hide{
     display: none;
 }
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
 .break-banner{
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fade 3.5s;
     /* font-size: 5em;
     padding: 0 2rem; */
 }
 .feauted-items-parallax-wrap{
-    background-image: url("images/happygirl.avif");
+    background-image: url("images/happy.avif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-}
-.break-banner-top{
+    background-size: 100% 100%;
     width: 100vw;
+    min-height:75vh;
+}
+
+.break-banner-top{
     display: flex;
     justify-content: center;
     min-height: 12rem;
     align-items: flex-end;
     font-size: 5em;
+    animation: top;
+    transition-duration: 500ms;
+   
 }
 .break-banner-mid{
-    width: 100%;
     display: flex;
     justify-content: center;
 }
 .break-banner-bottom{
-    width: 100%;
     display: flex;
     justify-content: center;
     min-height: 12rem;
     font-size: 3em;
     align-items: flex-start;
+   
 }
 
 @media(min-width:700px){
@@ -236,12 +246,21 @@ ul{
         flex-flow: column nowrap;
         justify-content: flex-end;
         align-items: flex-end;
+        padding-left: 15vw;
     }
     .categoriesaccordian{
+        background-image: url("images/plates.avif");
         justify-content: flex-start;
+    }
+    .categorylineitems{
+        justify-content: flex-start;
+        border-radius: .5rem;
     }
     .featureditemsaccordian{
         height: 20rem;
+    }
+    .break-banner-top, .break-banner-mid, .break-banner-bottom{
+    padding-left: 2.1vw;
     }
    
 }

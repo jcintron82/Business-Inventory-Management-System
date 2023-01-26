@@ -104,6 +104,7 @@ router.post("/", (req, res) => {
   const formattedTerps = terpenes;
   const price = req.body.price;
   const stock = req.body.stock;
+  const image = req.body.image
   
 
 

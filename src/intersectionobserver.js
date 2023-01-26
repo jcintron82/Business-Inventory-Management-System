@@ -1,5 +1,7 @@
-const observedObject = document.querySelector('#parallax-break');
+const observedObjectOne = document.querySelector('#parallax-break');
+const observedObjectTwo = document.querySelector('.parallax-break-div');
 const actionObject = document.querySelector('#break-banner');
+const actionObjectTwo = document.querySelector('#parallax-break-top');
 // const speed = 300;
 
 const observerOptions ={ 
@@ -8,9 +10,14 @@ const observerOptions ={
     // rootMargin:
 }
 
- const releventFunc = () => {
-    //Write logic for what will happen to actionObject when observedObject is observed...
-    actionObject.classList.toggle('break-banner')
+ const objectOne = () => {
+    actionObject.classList.toggle('break-banner');
+    
+}
+
+const objectTwo = () => {
+    actionObjectTwo.classList.toggle('break-banner');
+    
 }
 
 //Intersection observer to see when observedObject is in view
@@ -18,12 +25,25 @@ const observer = new IntersectionObserver((entries, observer ) => {
     entries.forEach(entry => {
         if (entry.isIntersecting){
         console.log(entry.target)
-        releventFunc()
+        objectOne()
+        observer.unobserve(observedObjectOne);
+        }    
+    })
+   }
+ , observerOptions)
+
+ const observer2 = new IntersectionObserver((entries, observer ) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+        console.log(entry.target)
+        objectTwo()
+        observer.unobserve(observedObjectTwo);
         }    
     })
    }
  , observerOptions)
 
 //Call the observe function on the observed object
-observer.observe(observedObject)
+observer.observe(observedObjectOne);
+observer2.observe(observedObjectTwo)
  
