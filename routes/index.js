@@ -4,7 +4,7 @@ var router = express.Router();
 
 
 const Flower = require("../flower");
-const Concentrate = require("../concentrates");
+const Concentrate = require("../schemas/drinks");
 
 
 /* GET home page. */

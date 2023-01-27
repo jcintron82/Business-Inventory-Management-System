@@ -13,7 +13,7 @@ const User = require("./schemas/newuserschema");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/form');
-var concentratesRouter = require('./routes/allconcentrates.js');
+var drinksRouter = require('./routes/drinksmenu.js');
 var loginPageRouter = require('./routes/loginpage.js');
 var registerPageRouter = require('./routes/registerpage');
 var app = express();
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/form', usersRouter);
-app.use('/concentrates', concentratesRouter);
+app.use('/drinksmenu', drinksRouter);
 app.use('/loginpage', loginPageRouter);
 app.use('/register', registerPageRouter);
 

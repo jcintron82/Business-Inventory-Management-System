@@ -17,7 +17,7 @@ var router = express.Router();
 // }).single('image');
 
 const Flower = require("../flower");
-const Concentrate = require("../concentrates");
+const Drinks = require("../schemas/drinks");
 
 /* Relevent functions to save products to the DB */
 const run = async (
@@ -33,7 +33,7 @@ const run = async (
   image
 ) => {
   try {
-    const newProduct = await Concentrate.create({
+    const newProduct = await Drinks.create({
       strainName: strain,
       classification: classification,
       cannabanoids: {
@@ -108,7 +108,7 @@ router.post("/", (req, res) => {
   
 
 
-  if(productType === 'Flower') {
+  if(productType === 'Food') {
   runFlower(
     null,
     strain,
@@ -121,7 +121,7 @@ router.post("/", (req, res) => {
     stock,
     image
   );}
-  else if (productType === 'Concentrate') {
+  else if (productType === 'Drinks') {
     run(
       null,
       strain,
