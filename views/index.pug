@@ -1,55 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        //- <meta http-equiv="refresh" content="2" >
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-        <title>Aphria - Home</title>
-        style 
-            include ../public/stylesheets/homepage.css
-            include ../public/stylesheets/searchbar.css
-            include ../public/stylesheets/footer.css
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    //- <meta http-equiv="refresh" content="2" >
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Aphria - Home</title>
+    style 
+      include ../public/stylesheets/homepage.css
+      include ../public/stylesheets/searchbar.css
+      include ../public/stylesheets/footer.css
+  </head>
 <header class=header> 
-      <nav class='navbar'>
-        <div class='brandTitle'><a href='/loginpage'><svg id='loginSVG' style="width:24px;height:24px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H8A2,2 0 0,1 6,16V4A2,2 0 0,1 8,2H20M17,7A3,3 0 0,0 14,4A3,3 0 0,0 11,7A3,3 0 0,0 14,10A3,3 0 0,0 17,7M8,15V16H20V15C20,13 16,11.9 14,11.9C12,11.9 8,13 8,15Z" />
-            </svg></a></div><span class=headerlogo><a href='/home'><img class=logoimg src='/images/Aphria.png'></a> </span>
-        <div class='linksWrap' id='linksWrap'>
-            <span class='burgerMenuWrap' id='burgerWrap'>
-                <svg class='hamburgerIcon' id='burger' style="width:34px;height:34px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-                </svg>
-            </span>
-            a(class='navbarLinks' href='/home' id='navbarLinks') Home
-            a(class='navbarLinks' href='/home' id='navbarLinks2') Flower
-            a(class='navbarLinks' href='/concentrates' id='navbarLinks3') Concentrates
-            a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal     
-        </div>
-      </nav>
-      //- <span class=triangle-banner-wrap><span class=triangle></span></span>
-      <button id='downarrowbtnid' class='downarrowbtn'>
-        <svg class='downarrowsvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-down-bold</title>
-        <path d="M9,4H15V12H19.84L12,19.84L4.16,12H9V4Z" />
+  <nav class='navbar'>
+    <div class='brandTitle'><a href='/loginpage'><svg id='loginSVG' style="width:24px;height:24px" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H8A2,2 0 0,1 6,16V4A2,2 0 0,1 8,2H20M17,7A3,3 0 0,0 14,4A3,3 0 0,0 11,7A3,3 0 0,0 14,10A3,3 0 0,0 17,7M8,15V16H20V15C20,13 16,11.9 14,11.9C12,11.9 8,13 8,15Z" />
+      </svg></a></div><span class=headerlogo><a href='/home'><img class=logoimg src='/images/Aphria.png'></a> </span>
+    <div class='linksWrap' id='linksWrap'>
+      <span class='burgerMenuWrap' id='burgerWrap'>
+        <svg class='hamburgerIcon' id='burger' style="width:34px;height:34px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
         </svg>
-      </button>
+      </span>
+      a(class='navbarLinks' href='/home' id='navbarLinks') Home
+      a(class='navbarLinks' href='/home' id='navbarLinks2') Flower
+      a(class='navbarLinks' href='/concentrates' id='navbarLinks3') Concentrates
+      a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal     
+    </div>
+  </nav>
+  //- <span class=triangle-banner-wrap><span class=triangle></span></span>
+  <button id='downarrowbtnid' class='downarrowbtn'>
+    <svg class='downarrowsvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-down-bold</title>
+    <path d="M9,4H15V12H19.84L12,19.84L4.16,12H9V4Z" />
+    </svg>
+  </button>
 </header>
-
 <body>
-
-  //- <article class=introblurb>
-  //-   <p>
-  //-     h1 Welcome To Aphria...</h1>
-  //-     <ul class=    >
-  //-       <li class=blurblistitems> Get exclusive deals, product drops, events, and more!<br> <strong>Stay in the know: <a>Click here</a> to sign up or use the QR code in store</strong>
-  //-       <li class=blurblistitems> Stop by and ask us about our Mystery specials on your favorites! Mystery Specials: In-store only. New products every Saturday.
-  //-       <li class=blurblistitems> Applicable discounts are applied at the time of order to reflect the current promotion. Promotions may be combined with daily savings, everyday discounts, and seasonal sale windows to a maximum value of 30% off.
-  //-       <li class=blurblistitems> Check out: <a href='/concentrates'>Daily Specials</a></li>
-       
-
-  //- </article>
   <div class=top-banner-bg-image></div>
   <div class=parallax-break-div id=parallax-break-div >
   <h4 id=parallax-break-top class=hide>
@@ -64,7 +51,6 @@
     <a href='/concentrates'><li class=categorylineitemsfood><div class=productsheaderwrap><h3 class=productheadershop>Current Food<br>Menu<br></h3></div></li></a>
     <a href='/concentrates'><li class=categorylineitemsdrinks><div class=productsheaderwrap><h3 class=productheadershop>Current Drink<br>Menu<br></h3></div></li></a>
   </div>
- 
   </section>
   </body>
   <div id=parallax-break class=parallax-break-div>
@@ -76,19 +62,11 @@
   </div>
   <div class=featured-items-parallax-wrap>
     <article class=featureditemsaccordian>
-    //- <h3>Featured Items</h3>
-    //- <ul class=featureditemsul>
-    //-   <a href=/concentrates><li class=featureditemsli> <img class=featuredimages src='/images/stock.avif'>Price<br>OG Kush flower 3.5G<br>Type and THC</li></a>
-    //-   <li class=featureditemsli>oo</li>
-    //-   <li class=featureditemsli>oo</li>
-    //-   <li class=featureditemsli>oo</li>
-    //-   <li class=featureditemsli>oo</li>
-    //-   <li class=featureditemsli>oo</li>
   </article>  
 </div>
 <div class=footer>
   <svg class=hidesvg id=totopsvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-double-up</title><path d="M7.41,18.41L6,17L12,11L18,17L16.59,18.41L12,13.83L7.41,18.41M7.41,12.41L6,11L12,5L18,11L16.59,12.41L12,7.83L7.41,12.41Z" /></svg>
 </div>
-    script
-        include ../src/intersectionobserver.js
-        include ../src/homepagescript.js
+  script
+    include ../src/intersectionobserver.js
+    include ../src/homepagescript.js

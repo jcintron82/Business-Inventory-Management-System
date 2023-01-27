@@ -9,10 +9,31 @@
 }
 .totopsvg {
     display: inline-block;
-    background: transparent;
+    background: #060000;
+    border-radius: 50%;
     fill: white;
-    width: 3.5rem;
+    stroke: #060000;
+    width: 15vw;
+    max-width: 2.5rem;
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 20px;
+}
+.totopsvg:active{
+    opacity: .5;
+}
+
+@media(min-width: 1024px) {
+    .totopsvg{
+        right: 50px;
+        bottom:25px
+    }
+    .totopsvg:active{
+        opacity:1;
+    }
+    
+    .totopsvg:hover{
+        cursor: pointer;
+        opacity: .5;
+    }
 }

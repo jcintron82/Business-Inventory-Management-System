@@ -55,31 +55,6 @@ body{
 h1{
     padding-left: 1rem;
 }
-.introblurb{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: #fafafa;
-    background-color: #060000;
-    width: 100vw;
-    margin: 5rem 0;
-    align-self: center;
-    font-size: 1.2em;
-    border-radius: .85rem;
-    padding: 0 .3rem
-}
-
-.blurblistul{
-    list-style-type: none;
-    width: 50vw;
-    
-    
-}
-.blurblistitems{
-    list-style-type: none;
-    padding: 1rem 0;
-    font-size: 1em;
-}
 .itemsection{
     display: flex;
     flex-direction: column;
