@@ -13,7 +13,7 @@
     color: white;
     width: 100vw;
     height: 9vh;
-    margin-bottom: 50vh;
+   
 
 }
 .brandTitle {
@@ -87,9 +87,9 @@ input[type=search]{
     max-width: 15rem;;
 }
 @media(min-width:1224px) {
-    .navbar{
+    /* .navbar{
         margin-bottom: 67vh;
-    }
+    } */
     .linksWrap{
         display: flex;
         width: 100%;

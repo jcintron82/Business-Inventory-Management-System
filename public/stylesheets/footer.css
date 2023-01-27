@@ -4,3 +4,15 @@
     min-height: 20rem;
     width: 105vw;
 }
+.hidesvg{
+    display: none;
+}
+.totopsvg {
+    display: inline-block;
+    background: transparent;
+    fill: white;
+    width: 3.5rem;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

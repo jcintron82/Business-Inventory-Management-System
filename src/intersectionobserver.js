@@ -1,7 +1,11 @@
 const observedObjectOne = document.querySelector('#parallax-break');
-const observedObjectTwo = document.querySelector('.parallax-break-div');
+const observedObjectTwo = document.querySelector('#parallax-break-div');
+const observeForSVG = document.querySelector('.featured-items-parallax-wrap');
+
+
 const actionObject = document.querySelector('#break-banner');
 const actionObjectTwo = document.querySelector('#parallax-break-top');
+const actionToTopSvg = document.querySelector('#totopsvg');
 // const speed = 300;
 
 const observerOptions ={ 
@@ -17,6 +21,10 @@ const observerOptions ={
 
 const objectTwo = () => {
     actionObjectTwo.classList.toggle('break-banner');
+    
+}
+const objectThree = () => {
+    actionToTopSvg.classList.toggle('totopsvg');
     
 }
 
@@ -43,7 +51,19 @@ const observer = new IntersectionObserver((entries, observer ) => {
    }
  , observerOptions)
 
+ const observer3 = new IntersectionObserver((entries, observer ) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+        console.log(entry.target)
+        objectThree()
+        // observer.unobserve(observedObjectTwo);
+        }    
+    })
+   }
+ , observerOptions)
+
 //Call the observe function on the observed object
 observer.observe(observedObjectOne);
-observer2.observe(observedObjectTwo)
+observer2.observe(observedObjectTwo);
+observer3.observe(observeForSVG);
  
