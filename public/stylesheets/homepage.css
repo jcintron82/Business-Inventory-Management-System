@@ -73,11 +73,10 @@ h1{
     background-image: url(/images/foodcategoryimg.avif);
     background-position: center;
     background-size: cover;
-    height: 25vh;
     border-radius: .5rem;
     /* box-shadow: 4px 4px 5px -2px rgb(224 224 224 / 75%); */
-    height: 14rem;
-    width: 14rem;
+    height: 15rem;
+    width: 15rem;
 }
 .categorylineitemsdrinks{
     background-image: url(/images/drinkscategoryimg.avif);
@@ -258,6 +257,13 @@ ul{
     .break-banner-top, .break-banner-mid, .break-banner-bottom{
     padding-right: 2rem;
     }
+    .downarrowsvg:hover{
+        fill: #CF5C36;
+        stroke: #060000;
+    }
+   .categorylineitemsdrinks:hover, .categorylineitemsfood:hover{
+    opacity: .95;
+   }
    
 }
 /* * {
