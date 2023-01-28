@@ -26,7 +26,7 @@
             </span>
             a(class='navbarLinks' href='/home' id='navbarLinks') Home
             a(class='navbarLinks' href='/home' id='navbarLinks2') Flower
-            a(class='navbarLinks' href='/concentrates' id='navbarLinks3') Concentrates
+            a(class='navbarLinks' href='/drinksmenu' id='navbarLinks3') Drink Menu
             a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Log-In     
         </div>
     </nav>
@@ -39,22 +39,16 @@
                 <div class='productImgWrap'><img class=productimg src='/images/drinkscategoryimg.avif'> </div>
                 <span class='nameAndPriceFlexWrap'>
                 <section class='productNameWrap'>
-                    <h2 class='productNameDiv'>#{unit.strainName} #{unit.qty}G</h2>
+                    <h2 class='productNameDiv'>#{unit.strainName} #{unit.qty}</h2>
                 <div class='thcPercentWrap'>
                     <h3 class='productClassificationDiv'>#{unit.classification}</h3><span class="dot"></span>
-                    <h3 class='thcPercentDiv'>THC: #{unit.cannabanoids.THC}%</h3>                             
+                    <h3 class='thcPercentDiv'>$#{unit.price}</h3>                             
                 </div>
                 <p class='productdescriptions'>
-                    |House Made Smokey Chipotle Pumkin Hummus Topped WIth Roasted
-                    |Pepita Smoked Paprika, Rosemary Infused Honey, And Sweet Potato Chips,
-                    |Served With Pita and Veggies
+                    |#{unit.topTerpenes}
 
                 </p>
                 </section>
-                <div class='priceWrap'>
-                    <h3 class='priceDiv'><span class='priceWrapGramDiv'>#{unit.qty}g -</span> <br>$#{unit.price}</h3> 
-                    <span class='percentOffWrap'>Buy Now</span>                  
-                </div>
                 </span>
                 </div>
         </div>

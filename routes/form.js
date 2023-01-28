@@ -101,7 +101,6 @@ router.post("/", (req, res) => {
   const cannabanoidCBD = req.body.cannabanoidsCBD;
   const qty = req.body.qty;
   const terpenes = req.body.terpenes;
-  const formattedTerps = terpenes;
   const price = req.body.price;
   const stock = req.body.stock;
   const image = req.body.image
@@ -116,7 +115,7 @@ router.post("/", (req, res) => {
     cannabanoidTHC,
     cannabanoidCBD,
     qty,
-    formattedTerps,
+    terpenes,
     price,
     stock,
     image
@@ -129,7 +128,7 @@ router.post("/", (req, res) => {
       cannabanoidTHC,
       cannabanoidCBD,
       qty,
-      formattedTerps,
+      terpenes,
       price,
       stock,
       image);
