@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        //- <meta http-equiv="refresh" content="2" >
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Explora&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
         <title>#{ title }</title>
         style 
             include ../public/stylesheets/allproductspage.css
@@ -29,12 +31,12 @@
         </div>
     </nav>
     <section class=productwrapsection>
-    <h1 class='productTypeHeader'>All Concentrates <div><label>Search<input type=search></label></div></h1> 
+    <h1 class='productTypeHeader'>Drink Specials</h1> 
     <body class='bodyWrapper'>
         <div class='mainWrap'> 
             each unit in product
                 <div class='productWrapper'>
-                <div class='productImgWrap'><img class=productimg src='/images/stock.avif'> </div>
+                <div class='productImgWrap'><img class=productimg src='/images/drinkscategoryimg.avif'> </div>
                 <span class='nameAndPriceFlexWrap'>
                 <section class='productNameWrap'>
                     <h2 class='productNameDiv'>#{unit.strainName} #{unit.qty}G</h2>
@@ -42,6 +44,12 @@
                     <h3 class='productClassificationDiv'>#{unit.classification}</h3><span class="dot"></span>
                     <h3 class='thcPercentDiv'>THC: #{unit.cannabanoids.THC}%</h3>                             
                 </div>
+                <p class='productdescriptions'>
+                    |House Made Smokey Chipotle Pumkin Hummus Topped WIth Roasted
+                    |Pepita Smoked Paprika, Rosemary Infused Honey, And Sweet Potato Chips,
+                    |Served With Pita and Veggies
+
+                </p>
                 </section>
                 <div class='priceWrap'>
                     <h3 class='priceDiv'><span class='priceWrapGramDiv'>#{unit.qty}g -</span> <br>$#{unit.price}</h3> 
