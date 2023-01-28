@@ -90,7 +90,7 @@ html, body{
     background-color: transparent;
     color: black;
     margin: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'IBM Plex Serif', serif;
     border-bottom: solid 1px;
     padding: 0.25rem 5rem;
     align-self: center;
@@ -138,8 +138,11 @@ html, body{
   }
   .productdescriptions{
     color: blaCK;
+    text-align:center;
     margin: .3rem .3rem .75rem .3rem;
     min-height: 5rem;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
   }
 .priceWrap{
     display: flex;
