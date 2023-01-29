@@ -1,22 +1,41 @@
 var express = require('express');
-const { db } = require('../schemas/food');
 var router = express.Router();
 
-const units = [];
-const food = require("../schemas/food");
+const appetizers = [];
+const entrees = [];
+const dessertarr = [];
 
+const appetizerschema = require("../schemas/appetizers");
+const desserts = require('../schemas/desserts');
+const DessertSchema = require('../schemas/desserts');
+const EntreeSchema = require("../schemas/entrees");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  const data = food.find({}, (err, cursor) => {
-    units.splice(0);
+  appetizerschema.find({}, (err, cursor) => {
+    appetizers.splice(0);
     cursor.forEach((dataset) => {
-        units.push(dataset)
-    })
-    res.render('foodmenu', { 
-    product: units})
-  })
-})
+      appetizers.push(dataset);
+    });
+  });
 
+  EntreeSchema.find({}, (err, cursor) => {
+    entrees.splice(0);
+    cursor.forEach((dataset) => {
+      entrees.push(dataset);
+   });
+  });
+    DessertSchema.find({}, (err, cursor) => {
+      dessertarr.splice(0);
+      cursor.forEach((dataset) => {
+        dessertarr.push(dataset);
+      });
+    });
+    res.render('foodmenu', { 
+    appetizers: appetizers,
+    entrees: entrees,
+    dessertarr: dessertarr,
+  });
+  });
 module.exports = router;

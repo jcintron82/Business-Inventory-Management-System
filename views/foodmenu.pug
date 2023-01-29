@@ -37,19 +37,50 @@
     <h1 class='productTypeHeader'>Current Menu</h1> 
     <body class='bodyWrapper'>
         <div class='mainWrap'> 
-            each unit in product
+            each appetizer in appetizers
                 <div class='productWrapper'>
-                <div class='productImgWrap'><img class=productimg src='/images/drinkscategoryimg.avif'> </div>
                 <span class='nameAndPriceFlexWrap'>
                 <section class='productNameWrap'>
-                    <h2 class='productNameDiv'>#{unit.strainName} #{unit.qty}</h2>
+                    <h2 class='productNameDiv'>#{appetizer.strainName}</h2>
                 <div class='thcPercentWrap'>
-                    <h3 class='productClassificationDiv'>#{unit.classification}</h3><span class="dot"></span>
-                    <h3 class='thcPercentDiv'>$#{unit.price}</h3>                             
+                    <h3 class='productClassificationDiv'>#{appetizer.classification}</h3><span class="dot"></span>
+                    <h3 class='thcPercentDiv'>$#{appetizer.price}</h3>                             
                 </div>
                 <p class='productdescriptions'>
-                    |#{unit.topTerpenes}
+                    |#{appetizer.topTerpenes}
 
+                </p>
+                </section>
+                </span>
+                </div>
+        </div>
+        each entree in entrees
+            <div class='productWrapper'>
+            <span class='nameAndPriceFlexWrap'>
+            <section class='productNameWrap'>
+                <h2 class='productNameDiv'>#{entree.strainName}</h2>
+            <div class='thcPercentWrap'>
+                <h3 class='productClassificationDiv'>#{entree.classification}</h3><span class="dot"></span>
+                <h3 class='thcPercentDiv'>$#{entree.price}</h3>                             
+            </div>
+            <p class='productdescriptions'>
+                |#{entree.topTerpenes}
+            </p>
+            </section>
+            </span>
+            </div>
+        </div>
+            each dessert in dessertarr
+                <div class='productWrapper'>
+                <span class='nameAndPriceFlexWrap'>
+                <section class='productNameWrap'>
+                    <h2 class='productNameDiv'>#{dessert.strainName}</h2>
+                <div class='thcPercentWrap'>
+                    <h3 class='productClassificationDiv'>#{dessert.classification}</h3><span class="dot"></span>
+                    <h3 class='thcPercentDiv'>$#{dessert.price}</h3>                             
+                </div>
+                <p class='productdescriptions'>
+                    |#{dessert.topTerpenes}
                 </p>
                 </section>
                 </span>
