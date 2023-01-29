@@ -16,9 +16,12 @@ var router = express.Router();
 //   storage: storage
 // }).single('image');
 
-const Flower = require("../schemas/food");
+
 const Drinks = require("../schemas/drinks");
+const Appetizer = require("../schemas/appetizers");
 const Entree = require("../schemas/entrees");
+const Dessert = require("../schemas/desserts");
+
 /* GET form page. */
 router.get("/", function (req, res, next) {
   res.render("form", { title: "Form", employee: req.body.username });
@@ -34,28 +37,21 @@ router.post("/", (req, res) => {
   const classification = req.body.classification;
   const terpenes = req.body.terpenes;
   const price = req.body.price;
-  const image = req.body.image
-  
 
-
-  if(productType === 'Entree') {
-  addEntree(
+  if(productType === 'Drinks') {
+  addDrinks(
     null,
     strain,
     classification,
     terpenes,
-    price,
-    image
-  );}
-  else if (productType === 'Drinks') {
-    run(
+    price,);}
+  else if (productType === 'Appetizer') {
+    addAppetizer(
       null,
       strain,
       classification,
       terpenes,
-      price,
-      image);
-      
+      price,);    
   }
   else if (productType === 'Entree') {
     addEntree(
@@ -63,22 +59,26 @@ router.post("/", (req, res) => {
     strain,
     classification,
     terpenes,
-    price,
-    image);
-    
+    price,);   
+}else {
+  addDessert(
+  null,
+  strain,
+  classification,
+  terpenes,
+  price,);   
 }
   res.redirect("./form");
 });
 
 
 /* Relevent functions to save products to the DB */
-const run = async (
+const addDrinks = async (
   err,
   strain,
   classification,
   topTerpenes,
   price,
-  image
 ) => {
   try {
     const newProduct = await Drinks.create({
@@ -86,31 +86,8 @@ const run = async (
       classification: classification,
       topTerpenes: topTerpenes,
       price: price,
-      image: image,
       // similarTo: mongoose.SchemaTypes.ObjectId
     });
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-const runFlower = async (
-  err,
-  strain,
-  classification,
-  topTerpenes,
-  price,
-  image
-) => {
-  try {
-    const newProduct = await Flower.create({
-      strainName: strain,
-      classification: classification,
-      topTerpenes: topTerpenes,
-      price: price,
-      image: image,
-      // similarTo: mongoose.SchemaTypes.ObjectId
-    });
-
   } catch (err) {
     console.log(err.message);
   }
@@ -121,7 +98,6 @@ const addEntree = async (
   classification,
   topTerpenes,
   price,
-  image
 ) => {
   try {
     const newProduct = await Entree.create({
@@ -129,7 +105,6 @@ const addEntree = async (
       classification: classification,
       topTerpenes: topTerpenes,
       price: price,
-      image: image,
       // similarTo: mongoose.SchemaTypes.ObjectId
     });
 
@@ -137,6 +112,44 @@ const addEntree = async (
     console.log(err.message);
   }
 };
+const addAppetizer = async (
+  err,
+  strain,
+  classification,
+  topTerpenes,
+  price,
+) => {
+  try {
+    const newProduct = await Appetizer.create({
+      strainName: strain,
+      classification: classification,
+      topTerpenes: topTerpenes,
+      price: price,
+      // similarTo: mongoose.SchemaTypes.ObjectId
+    });
 
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+const addDessert = async (
+  err,
+  strain,
+  classification,
+  topTerpenes,
+  price,
+) => {
+  try {
+    const newProduct = await Dessert.create({
+      strainName: strain,
+      classification: classification,
+      topTerpenes: topTerpenes,
+      price: price,
+      // similarTo: mongoose.SchemaTypes.ObjectId
+    });
 
+  } catch (err) {
+    console.log(err.message);
+  }
+};
 module.exports = router;
