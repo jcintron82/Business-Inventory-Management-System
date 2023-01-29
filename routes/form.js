@@ -28,21 +28,24 @@ router.get("/", function (req, res, next) {
   if (err) throw err;
 });
 
+console.log("this works");
+
 /* POST form data. */
 router.post("/", (req, res) => {
+  const productType = req.body.classification;
   const strain = req.body.strain;
   const classification = req.body.classification;
   const terpenes = req.body.terpenes;
   const price = req.body.price;
 
-  if(classification === 'Beverage') {
+  if(productType === 'Beverage') {
   addDrinks(
     null,
     strain,
     classification,
     terpenes,
     price,);}
-  else if (classification === 'Appetizer') {
+  else if (productType === 'Appetizer') {
     addAppetizer(
       null,
       strain,
@@ -50,7 +53,7 @@ router.post("/", (req, res) => {
       terpenes,
       price,);    
   }
-  else if (classification === 'Entree') {
+  else if (productType === 'Entree') {
     addEntree(
     null,
     strain,
@@ -122,7 +125,6 @@ const addAppetizer = async (
       classification: classification,
       topTerpenes: topTerpenes,
       price: price,
-      image: image,
       // similarTo: mongoose.SchemaTypes.ObjectId
     });
 
@@ -136,7 +138,6 @@ const addDessert = async (
   classification,
   topTerpenes,
   price,
-  image
 ) => {
   try {
     const newProduct = await Dessert.create({
@@ -144,7 +145,6 @@ const addDessert = async (
       classification: classification,
       topTerpenes: topTerpenes,
       price: price,
-      image: image,
       // similarTo: mongoose.SchemaTypes.ObjectId
     });
 

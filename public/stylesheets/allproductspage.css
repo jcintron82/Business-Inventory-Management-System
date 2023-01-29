@@ -30,6 +30,7 @@ html, body{
 }
 .itemType{
     margin-bottom: .25rem;
+    text-align: center;
 }
 .productTypeHeader{
     display: flex;

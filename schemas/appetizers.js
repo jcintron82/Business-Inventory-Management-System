@@ -31,6 +31,6 @@ image:  {
   }
 })
 
-mongoose.model('appetizer', entreeSchema)
+mongoose.model('appetizers', entreeSchema)
 
-module.exports = mongoose.model("appetizer", entreeSchema)
+module.exports = mongoose.model("appetizers", entreeSchema)
