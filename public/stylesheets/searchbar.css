@@ -59,9 +59,11 @@ a {
     border-bottom: solid .1px #833920;
     font-family: 'IBM Plex Serif', serif;
 }
+.navbarLinks.burgerMenu:active{
+    color:#CF5C36;
+}
 #navbarLinks4{
-    border-radius: .5rem;
-    border-bottom: none;
+    border-bottom-left-radius: .5rem;
 }
 .linksWrap.burgerMenu{  
     position:fixed;

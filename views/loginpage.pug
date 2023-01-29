@@ -16,24 +16,24 @@
 
     </head>
 <header class=header> 
-      <nav class='navbar'>
-        <div class='brandTitle'><a href='/loginpage'><svg id='loginSVG' style="width:24px;height:24px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H8A2,2 0 0,1 6,16V4A2,2 0 0,1 8,2H20M17,7A3,3 0 0,0 14,4A3,3 0 0,0 11,7A3,3 0 0,0 14,10A3,3 0 0,0 17,7M8,15V16H20V15C20,13 16,11.9 14,11.9C12,11.9 8,13 8,15Z" />
-            </svg></a></div>
-            <a href='/home'><span class=headerlogohomepage><h1 class=headerlogoname>Aphria</h1> <h2 class=headerlogoslogan>Fine Dining</h2>
-            </span></a>
-        <div class='linksWrap' id='linksWrap'>
-            <span class='burgerMenuWrap' id='burgerWrap'>
-                <svg class='hamburgerIcon' id='burger' style="width:34px;height:34px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-                </svg>
-            </span>
-            a(class='navbarLinks' href='/home' id='navbarLinks') Home
-            a(class='navbarLinks' href='/foodmenu' id='navbarLinks2') Food Menu
-            a(class='navbarLinks' href='/drinksmenu' id='navbarLinks3') Drink Menu
-            a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal     
-        </div>
-      </nav>
+    <nav class='navbar'>
+    <div>
+      <a href='/home'><span class=headerlogohomepage><h1 class=headerlogoname>Aphria</h1> <h2 class=headerlogoslogan>Fine Dining</h2>
+      </span></a></div>
+      <div class='burgerMenuWrap' id='burgerWrap'>
+        <svg class='hamburgerIcon' id='burger' style="width:34px;height:34px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+        </svg>
+      </div>
+    <div class='linksWrap' id='linksWrap'>
+      <div class=x>
+        a(class='navbarLinks' href='/home' id='navbarLinks') Home
+        a(class='navbarLinks' href='/foodmenu' id='navbarLinks2') Food Menu
+        a(class='navbarLinks' href='/drinksmenu' id='navbarLinks3') Drink Menu
+        a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal 
+      </div>    
+    </div>
+     </nav>
       
       //- <span class=triangle-banner-wrap><span class=triangle></span></span>
 </header>
@@ -46,15 +46,12 @@
 
    
     <div class=formTabsWrap>
-    <span class=registerheader>New employee? <a href='/register'>Register</a>
-    //- <button id=signuptab>Sign Up</button>
-    </span>
         <form id=loginform class='loginForm' method="POST" action=/loginpage>  Employee Login
-            <label for='username'>Username </label>
-                <input required name='username' type=text>
+            <label for='username'> </label>
+                <input required name='username' type=text placeholder='Username'>
             
-            <label for='password'>Password </label>
-                <input required name='password' type='password'>    
+            <label for='password'> </label>
+                <input required name='password' type='password' placeholder='Password'>    
             <button class=submitbtn type='submit' type=text>Log-In</button>
             <span class=democredentialswrap>Demo Credentials
                 <ul>
