@@ -5,6 +5,7 @@ const navbarLinks = document.getElementsByClassName('navbarLinks')
 const navOne = document.getElementById('navbarLinks');
 const navTwo = document.getElementById('navbarLinks2');
 const navThree = document.getElementById('navbarLinks3')
+const navFour = document.getElementById('navbarLinks4')
 const linksWrap = document.getElementById('linksWrap')
 const burgerWrap = document.getElementById('burgerWrap')
 
@@ -13,6 +14,7 @@ hamburger.addEventListener('click', () => {
     navOne.classList.toggle('burgerMenu');
     navTwo.classList.toggle('burgerMenu');
     navThree.classList.toggle('burgerMenu');
+    navFour.classList.toggle('burgerMenu');
     linksWrap.classList.toggle('burgerMenu');
     burgerWrap.classList.toggle('active')
 })
