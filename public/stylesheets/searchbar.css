@@ -98,9 +98,12 @@ input[type=search]{
     max-width: 15rem;;
 }
 @media(min-width:1224px) {
-    /* .navbar{
-        margin-bottom: 67vh;
-    } */
+    .headerlogonam:hover{
+        color: #CF5C36;
+    }
+    .headerlogohomepage:hover{
+        color: #CF5C36;
+    }
     .linksWrap{
         display: flex;
         width: 100%;

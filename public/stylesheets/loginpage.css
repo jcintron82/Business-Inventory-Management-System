@@ -31,7 +31,6 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
     padding: 10vh 0;
     width: 100%;
     border-radius: .5rem;
@@ -76,6 +75,15 @@ input{
 }
 .submitbtn:active{
     opacity: .5;
+}
+.democredentialswrap{
+    align-self: flex-start;
+    margin-top: 4rem;
+    margin-left: 5%;
+    padding: 0.5rem;
+    border-radius: 0.35rem;
+    background-color: #D3CCC5;
+
 }
 @media(min-width:1024px){
     .submitbtn:hover{

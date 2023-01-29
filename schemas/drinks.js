@@ -8,7 +8,7 @@ const concentrateSchema = new mongoose.Schema({
   },
   classification:  {
     type: String, 
-    required: true
+
   },
   
   topTerpenes:  {

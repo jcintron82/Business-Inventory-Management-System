@@ -110,6 +110,9 @@ h1{
 }
 .productheadershop{
     margin: 0;
+    font-family: 'IBM Plex Serif', serif;
+    color:#f9f9f9;
+    font-weight: 400;
 
 }
 .categoryimages{
@@ -204,11 +207,14 @@ h1{
     font-size: 5em;
     animation: top;
     transition-duration: 500ms;
-   
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 300;
 }
 .break-banner-mid{
     display: flex;
     justify-content: center;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
 }
 .break-banner-bottom{
     display: flex;
@@ -216,7 +222,8 @@ h1{
     min-height: 12rem;
     font-size: 3em;
     align-items: flex-start;
-   
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
 }
 
 @media(min-width:700px){

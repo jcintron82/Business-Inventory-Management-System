@@ -33,10 +33,11 @@
             a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal    
         </div>
     </nav>
-    <section class=productwrapsection>
     <h1 class='productTypeHeader'>Current Menu</h1> 
     <body class='bodyWrapper'>
-        <div class='mainWrap'> 
+    <div class='mainWrap'> 
+        <article>
+            <h1 class='itemType'>Appetizers</h2>
             each appetizer in appetizers
                 <div class='productWrapper'>
                 <span class='nameAndPriceFlexWrap'>
@@ -48,12 +49,13 @@
                 </div>
                 <p class='productdescriptions'>
                     |#{appetizer.topTerpenes}
-
                 </p>
                 </section>
                 </span>
                 </div>
-        </div>
+        </article>
+        <article>
+            <h1 class='itemType'>Entrees</h2>
         each entree in entrees
             <div class='productWrapper'>
             <span class='nameAndPriceFlexWrap'>
@@ -69,7 +71,9 @@
             </section>
             </span>
             </div>
-        </div>
+        </article>
+        <article>
+            <h1 class='itemType'>Desserts</h2>
             each dessert in dessertarr
                 <div class='productWrapper'>
                 <span class='nameAndPriceFlexWrap'>
@@ -85,8 +89,8 @@
                 </section>
                 </span>
                 </div>
-        </div>
-    </section>
+    </div>
+        </article>
     </body>
     script
         include ../src/hamburgerMenuScript.js
