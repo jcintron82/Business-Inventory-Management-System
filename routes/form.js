@@ -16,7 +16,7 @@ var router = express.Router();
 //   storage: storage
 // }).single('image');
 
-const Flower = require("../flower");
+const Flower = require("../schemas/food");
 const Drinks = require("../schemas/drinks");
 
 /* Relevent functions to save products to the DB */

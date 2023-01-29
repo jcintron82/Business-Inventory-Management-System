@@ -2,21 +2,20 @@ var express = require('express');
 const { db } = require('../schemas/food');
 var router = express.Router();
 
-const concUnits = [];
-const Flower = require("../schemas/food");
-const drinks = require("../schemas/drinks");
+const units = [];
+const food = require("../schemas/food");
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  const data = drinks.find({}, (err, cursor) => {
-    concUnits.splice(0);
+  const data = food.find({}, (err, cursor) => {
+    units.splice(0);
     cursor.forEach((dataset) => {
-    concUnits.push(dataset)
+        units.push(dataset)
     })
     res.render('drinksmenu', { 
-    product: concUnits})
+    product: units})
   })
 })
 
