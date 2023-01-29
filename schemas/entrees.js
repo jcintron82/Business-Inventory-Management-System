@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const multer  = require('multer')
 
-const concentrateSchema = new mongoose.Schema({
+const entreeSchema = new mongoose.Schema({
   strainName: {
     type: String, 
     required: true
@@ -31,6 +31,6 @@ image:  {
   }
 })
 
-mongoose.model('drinks', concentrateSchema)
+mongoose.model('entree', entreeSchema)
 
-module.exports = mongoose.model("drinks", concentrateSchema)
+module.exports = mongoose.model("entree", entreeSchema)

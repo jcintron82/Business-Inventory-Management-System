@@ -18,72 +18,7 @@ var router = express.Router();
 
 const Flower = require("../schemas/food");
 const Drinks = require("../schemas/drinks");
-
-/* Relevent functions to save products to the DB */
-const run = async (
-  err,
-  strain,
-  classification,
-  cannabanoidsTHC,
-  cannabanoidsCBD,
-  qty,
-  topTerpenes,
-  price,
-  stock,
-  image
-) => {
-  try {
-    const newProduct = await Drinks.create({
-      strainName: strain,
-      classification: classification,
-      cannabanoids: {
-        THC: cannabanoidsTHC,
-        CBD: cannabanoidsCBD,
-      },
-      qty: qty,
-      topTerpenes: topTerpenes,
-      price: price,
-      stock: stock,
-      image: image,
-      // similarTo: mongoose.SchemaTypes.ObjectId
-    });
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-const runFlower = async (
-  err,
-  strain,
-  classification,
-  cannabanoidsTHC,
-  cannabanoidsCBD,
-  qty,
-  topTerpenes,
-  price,
-  stock,
-  image
-) => {
-  try {
-    const newProduct = await Flower.create({
-      strainName: strain,
-      classification: classification,
-      cannabanoids: {
-        THC: cannabanoidsTHC,
-        CBD: cannabanoidsCBD,
-      },
-      qty: qty,
-      topTerpenes: topTerpenes,
-      price: price,
-      stock: stock,
-      image: image,
-      // similarTo: mongoose.SchemaTypes.ObjectId
-    });
-
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
+const Entree = require("../schemas/entrees");
 /* GET form page. */
 router.get("/", function (req, res, next) {
   res.render("form", { title: "Form", employee: req.body.username });
@@ -97,27 +32,19 @@ router.post("/", (req, res) => {
   const productType = req.body.type;
   const strain = req.body.strain;
   const classification = req.body.classification;
-  const cannabanoidTHC = req.body.cannabanoidsTHC;
-  const cannabanoidCBD = req.body.cannabanoidsCBD;
-  const qty = req.body.qty;
   const terpenes = req.body.terpenes;
   const price = req.body.price;
-  const stock = req.body.stock;
   const image = req.body.image
   
 
 
-  if(productType === 'Food') {
-  runFlower(
+  if(productType === 'Entree') {
+  addEntree(
     null,
     strain,
     classification,
-    cannabanoidTHC,
-    cannabanoidCBD,
-    qty,
     terpenes,
     price,
-    stock,
     image
   );}
   else if (productType === 'Drinks') {
@@ -125,18 +52,91 @@ router.post("/", (req, res) => {
       null,
       strain,
       classification,
-      cannabanoidTHC,
-      cannabanoidCBD,
-      qty,
       terpenes,
       price,
-      stock,
       image);
       
   }
+  else if (productType === 'Entree') {
+    addEntree(
+    null,
+    strain,
+    classification,
+    terpenes,
+    price,
+    image);
+    
+}
   res.redirect("./form");
 });
 
+
+/* Relevent functions to save products to the DB */
+const run = async (
+  err,
+  strain,
+  classification,
+  topTerpenes,
+  price,
+  image
+) => {
+  try {
+    const newProduct = await Drinks.create({
+      strainName: strain,
+      classification: classification,
+      topTerpenes: topTerpenes,
+      price: price,
+      image: image,
+      // similarTo: mongoose.SchemaTypes.ObjectId
+    });
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+const runFlower = async (
+  err,
+  strain,
+  classification,
+  topTerpenes,
+  price,
+  image
+) => {
+  try {
+    const newProduct = await Flower.create({
+      strainName: strain,
+      classification: classification,
+      topTerpenes: topTerpenes,
+      price: price,
+      image: image,
+      // similarTo: mongoose.SchemaTypes.ObjectId
+    });
+
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+const addEntree = async (
+  err,
+  strain,
+  classification,
+  topTerpenes,
+  price,
+  image
+) => {
+  try {
+    const newProduct = await Entree.create({
+      strainName: strain,
+      classification: classification,
+      topTerpenes: topTerpenes,
+      price: price,
+      image: image,
+      // similarTo: mongoose.SchemaTypes.ObjectId
+    });
+
+  } catch (err) {
+    console.log(err.message);
+  }
+};
 
 
 module.exports = router;

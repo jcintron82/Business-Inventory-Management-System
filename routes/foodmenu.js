@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
     cursor.forEach((dataset) => {
         units.push(dataset)
     })
-    res.render('drinksmenu', { 
+    res.render('foodmenu', { 
     product: units})
   })
 })

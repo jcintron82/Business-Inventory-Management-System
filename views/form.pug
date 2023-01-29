@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Explora&family=IBM+Plex+Serif:wght@100;500&display=swap" rel="stylesheet">
         //- <meta http-equiv="refresh" content="3" >
-        <title>#{ title }</title>
+        <title>Aphria Fine Dining</title>
         style 
             include ../public/stylesheets/style.css
             include ../public/stylesheets/formpage.css
@@ -28,7 +28,7 @@
                 </svg>
             </span>
             a(class='navbarLinks' href='/home' id='navbarLinks') Home
-            a(class='navbarLinks' href='/foodmenu' id='navbarLinks2') Flower
+            a(class='navbarLinks' href='/foodmenu' id='navbarLinks2') Food Menu
             a(class='navbarLinks' href='/drinksmenu' id='navbarLinks3') Drink Menu
             a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal    
         </div>
@@ -40,8 +40,10 @@
     <form class='formWrap' method="POST" action='/form'>
         <label> Type
             <select name='type' required>
-                <option name='type' value='Food'>Food</option>
-                <option name='type' value='Drinks'>Drinks</option>
+                <option name='type' value='Appetizer'>Appetizer</option>
+                <option name='type' value='Entree'>Entree</option>
+                <option name='type' value='Dessert'>Dessert</option>
+                <option name='type' value='Beverage'>Beverage</option>
             </select>
         </label>
 
