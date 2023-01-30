@@ -3,7 +3,7 @@
     to { transform: translate3d(0, -15px, 0);}
 }
 .downarrowsvg{
-    position: absolute;
+    position: relative;
     width: 14vw;
     max-width: 3rem;
     fill: white;
@@ -13,14 +13,18 @@
     animation: arrowbounce 1s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    bottom: 30%;
-    left: 50%;
+
+}
+.arrowwrap{
+    display: flex;
+    order: 3;
+    height: 0;
 }
 .downarrowbtn{
-    position: fixed;
-    bottom: -45%;
-    left: 45%;
+    position: relative;
     display: flex;
+    bottom: 1.8vh;
+    left: 47vw;
     width: 14vw;
     max-width: 3rem;
     align-self: center;
@@ -28,7 +32,6 @@
     background: transparent;
     border: transparent;
     order: 2;
-    top: 5px;
 }
 
 html,body
