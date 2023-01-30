@@ -16,30 +16,30 @@
       include ../public/stylesheets/footer.css
   </head>
 <header class=header>
-  <nav class='navbar'>
-    <div>
-      <a href='/home'><span class=headerlogohomepage><h1 class=headerlogoname>Aphria</h1> <h2 class=headerlogoslogan>Fine Dining</h2>
-      </span></a></div>
-      <div class='burgerMenuWrap' id='burgerWrap'>
-        <svg class='hamburgerIcon' id='burger' style="width:34px;height:34px" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-        </svg>
+    <img class=headerimg src='/images/drink.avif'><a id='downarrowbtnid' class='downarrowbtn'>
+      <svg class='downarrowsvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Navigate down</title>
+      <path d="M9,4H15V12H19.84L12,19.84L4.16,12H9V4Z" />
+      </svg>
+    </a>
+    <nav class='navbar'>
+      <div>
+        <a href='/home'><span class=headerlogohomepage><h1 class=headerlogoname>Aphria</h1> <h2 class=headerlogoslogan>Fine Dining</h2>
+        </span></a></div>
+        <div class='burgerMenuWrap' id='burgerWrap'>
+          <svg class='hamburgerIcon' id='burger' style="width:34px;height:34px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+        </div>
+      <div class='linksWrap' id='linksWrap'>
+        <div class=x>
+          a(class='navbarLinks' href='/home' id='navbarLinks') Home
+          a(class='navbarLinks' href='/foodmenu' id='navbarLinks2') Food Menu
+          a(class='navbarLinks' href='/drinksmenu' id='navbarLinks3') Drink Menu
+          a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal 
+        </div>    
       </div>
-    <div class='linksWrap' id='linksWrap'>
-      <div class=x>
-        a(class='navbarLinks' href='/home' id='navbarLinks') Home
-        a(class='navbarLinks' href='/foodmenu' id='navbarLinks2') Food Menu
-        a(class='navbarLinks' href='/drinksmenu' id='navbarLinks3') Drink Menu
-        a(class='navbarLinks' href='/loginpage' id='navbarLinks4') Employee<br>Portal 
-      </div>    
-    </div>
-  </nav>
-  //- <span class=triangle-banner-wrap><span class=triangle></span></span>
-  <button id='downarrowbtnid' class='downarrowbtn'>
-    <svg class='downarrowsvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Navigate down</title>
-    <path d="M9,4H15V12H19.84L12,19.84L4.16,12H9V4Z" />
-    </svg>
-  </button>
+    </nav>
+    //- <span class=triangle-banner-wrap><span class=triangle></span></span>
 </header>
 <body>
   <div class=top-banner-bg-image></div>
