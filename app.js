@@ -124,24 +124,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(5000, () => {
-  console.log('Running on Port 5000...')
-})
-
-//Middleare for browser live reload
-// var livereload = require("livereload");
-// var connectLiveReload = require("connect-livereload");
-// const liveReloadServer = livereload.createServer();
-// liveReloadServer.server.once("connection", () => {
-//   setTimeout(() => {
-//     liveReloadServer.refresh("/");
-//   }, 100);
-// });
-// app.use(connectLiveReload());
- 
-
+const PORT = 10000;
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
 const mongoose=require('mongoose');
-const { unwatchFile } = require('fs');
 mongoose.connect('mongodb+srv://dispensary:dispensarypassword@dispensary.gd0egr1.mongodb.net/?retryWrites=true&w=majority');
 
 
