@@ -241,6 +241,9 @@ ul{
     justify-content: center;
 }
 @media(min-width:1024px){
+    .header{
+        background-image: url(images/drinkmobile.jpg);
+        }
     .downarrowbtn:hover{
      cursor: pointer;
     }
