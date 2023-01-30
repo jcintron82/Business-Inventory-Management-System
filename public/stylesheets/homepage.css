@@ -36,7 +36,7 @@ html,body
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(images/drink.avif);
+    background-image: url(images/drinkmobile.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -242,7 +242,7 @@ ul{
 }
 @media(min-width:1024px){
     .header{
-        background-image: url(images/drinkmobile.jpg);
+        background-image: url(images/drink.avif);
         }
     .downarrowbtn:hover{
      cursor: pointer;
