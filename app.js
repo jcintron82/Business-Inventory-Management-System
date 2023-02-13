@@ -125,7 +125,7 @@ app.use(function(err, req, res, next) {
 });
 
 const PORT = 10000;
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
   console.log(`server started on port ${PORT}`);
 });
 const mongoose=require('mongoose');
