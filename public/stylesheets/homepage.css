@@ -36,12 +36,19 @@ html,body
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url(images/drink.avif);
+    height: 100%;
+    /* background-image: url(images/drink.avif); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 100vh;
+    }
+    picture{
+        width: 100%;
+    }
+    img{
+        width: 100%;
     }
 body{
     display: flex;
@@ -241,9 +248,9 @@ ul{
     justify-content: center;
 }
 @media(min-width:1024px){
-    .header{
+    /* .header{
         background-image: url(images/drinkmobile.jpg);
-        }
+        } */
     .downarrowbtn:hover{
      cursor: pointer;
     }
