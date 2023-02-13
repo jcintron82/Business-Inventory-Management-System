@@ -18,7 +18,6 @@ hamburger.addEventListener('click', () => {
     linksWrap.classList.toggle('burgerMenu');
     burgerWrap.classList.toggle('active')
 })
-
 const loginSVG = document.getElementById('loginSVG');
 loginSVG.addEventListener('click', () => {
     router.get("/login", function (req, res, next) {
