@@ -98,13 +98,16 @@ h1{
     background-image: url(/images/drinkscategoryimg.avif);
 
 }
+.accordianimagewrap{
+    width: 100%;
+    height: 40rem;
+}
 .categoriesaccordian{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding:1.5rem;
-    background-image: url("images/platesmobile.jpg");
+    /* background-image: url("images/platesmobile.jpg"); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -117,6 +120,8 @@ h1{
     flex-flow: row wrap;
     padding-left: 0;
     max-width: 55rem;
+    position: relative;
+    bottom: 100%;
     
 }
 .productsheaderwrap{
@@ -266,11 +271,11 @@ ul{
     .categoriesul{
         flex-flow: column nowrap;
         justify-content: flex-end;
-        align-items: flex-end;
-        padding-left: 15vw;
+        align-items: flex-start;
+        padding-left: 10vw;
     }
     .categoriesaccordian{
-        background-image: url("images/plates.avif");
+        /* background-image: url("images/plates.avif"); */
         justify-content: flex-start;
     }
     .categorylineitems{
