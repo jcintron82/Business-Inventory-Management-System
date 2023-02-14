@@ -14,7 +14,7 @@
     animation-iteration-count: infinite;
     position: relative;
     bottom: 30px;
-
+    left: 45vw;
 }
 .downarrowbtn{
     display: flex;
@@ -104,7 +104,7 @@ h1{
     align-items: center;
     width: 100%;
     padding:1.5rem;
-    background-image: url("images/plates.avif");
+    background-image: url("images/platesmobile.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -206,7 +206,7 @@ h1{
     padding: 0 2rem; */
 }
 .featured-items-parallax-wrap{
-    background-image: url("images/happy.avif");
+    background-image: url("images/happymobile.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-repeat: no-repeat;
