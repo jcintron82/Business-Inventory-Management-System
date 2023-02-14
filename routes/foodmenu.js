@@ -37,5 +37,6 @@ router.get('/', function(req, res, next) {
     entrees: entrees,
     dessertarr: dessertarr,
   });
+  location.reload();
   });
 module.exports = router;
